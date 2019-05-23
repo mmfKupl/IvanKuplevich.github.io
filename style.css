@@ -181,6 +181,7 @@ section.section-skills span {
 	footer {
 		justify-content: space-around;
 		align-content: center;
+		position: initial;
 		/* padding-bottom: 5px; */
 	}
 	header {
