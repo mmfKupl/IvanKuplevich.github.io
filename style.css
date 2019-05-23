@@ -6,6 +6,11 @@
 	font-size: 14px;
 }
 
+:root {
+	--header-footer-color: #fdfdfd;
+	--border-color: #dcdbdb;
+}
+
 a {
 	color: #000;
 	text-decoration: none;	
@@ -34,6 +39,7 @@ h4 {
 }
 footer h4 {
 	font-size: 12px;
+	padding: 2px 0;
 }
 
 
@@ -43,6 +49,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	overflow-x:	 hidden;
 }
 
 header, main, footer {
@@ -51,11 +58,11 @@ header, main, footer {
 }
 
 header {
-	border-bottom: 1px solid #dcdbdb;
+	border-bottom: 1px solid var(--border-color);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color: #fcfcfc;
+	background-color: var(--header-footer-color);
 }
 
 header > p {
@@ -63,16 +70,20 @@ header > p {
 }
 
 main {
-	height: 100%;
+	height: auto;
+	padding-bottom: 40px; 
 }
 
 footer {
 	min-height: 10px;
-	border-top: 1px solid #dcdbdb;
-	background-color: #fcfcfc;
+	border-top: 1px solid var(--border-color);
+	background-color: var(--header-footer-color);
 	padding: 5px 20px 7px;
 	align-items: center;
 	display: flex;
+	min-height: 25px; 
+	position: fixed;
+	bottom: 0;
 }
 
 footer > a {
@@ -101,27 +112,47 @@ section.about h3 {
 	color: #515151;
 }
 
-section.work-place {
+section.section-box {
 	display: flex;
 	margin-left: 25px;
 	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
-div.work-date {
+div.section-date {
 	max-width: 150px;
+	min-width: 150px;
 	margin-right: 20px;
 }
-div.work-date h4 {
+div.section-date h4 {
 	font-size: 15px;
 	font-weight: 500;
 }
-div.work-date p {
+div.section-date p, div.place-role p {
 	font-size: 13px;
 	font-weight: 500;
 	color: gray;
 }
-div.place-role h4 {
+div.place-role h4:first-child {
 	margin-bottom: 5px;
+}
+
+section.section-skills {
+	/* background-color: #fafafa; */
+	padding: 0 10px;
+	margin-left: 0;
+	border-radius: 5px; 
+	flex-wrap: wrap;
+}
+
+section.section-skills span {
+	display: inline-block;
+	padding: 3px 10px;
+	background-color: #eee;
+	border-radius: 5px; 
+	margin: 5px 5px;
+	font-size: 13px;
+	color: #313131;
 }
 
 
@@ -150,7 +181,19 @@ div.place-role h4 {
 	footer {
 		justify-content: space-around;
 		align-content: center;
-		padding-bottom: 5px;
+		/* padding-bottom: 5px; */
+	}
+	header {
+		padding-top: 0;
+	}
+	
+	div.section-date {
+		min-width: 75px;
+		max-width: 75px;
+	}
+
+	section.section-box {
+		margin-left: 10px;
 	}
 }
 
