@@ -181,7 +181,7 @@ section.section-skills span {
 	footer {
 		justify-content: space-around;
 		align-content: center;
-		position: initial;
+		position: relative	;
 		/* padding-bottom: 5px; */
 	}
 	header {
@@ -195,6 +195,10 @@ section.section-skills span {
 
 	section.section-box {
 		margin-left: 10px;
+	}
+
+	main {
+		min-height: auto;
 	}
 }
 
