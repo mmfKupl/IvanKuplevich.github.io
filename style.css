@@ -154,6 +154,26 @@ section.section-skills span {
 	color: #313131;
 }
 
+section.about-myself {
+	margin-top: 35px;
+}
+section.about-myself section.section-box {
+	margin-left: 0;
+	display: block;
+}
+
+section.about-myself h3, section.about-pojects h3 {
+	text-align: center;
+	color: #000;
+}
+
+section.about-myself p {
+	text-indent: 3rem; 
+	text-align: justify;
+	font-size: 1rem;
+	color: #030303;
+}
+
 
 @media (max-width: 800px) {
 	* {
@@ -190,10 +210,18 @@ section.section-skills span {
 	div.section-date {
 		min-width: 75px;
 		max-width: 75px;
+		margin-right: 25px;
 	}
 
 	section.section-box {
-		margin-left: 10px;
+		margin-left: 5px;
+	}
+
+	section.about-myself p {
+		text-indent: 1.5rem; 
+		text-align: justify;
+		font-size: 1rem;
+		color: #030303;
 	}
 }
 

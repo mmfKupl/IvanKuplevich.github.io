@@ -4,7 +4,7 @@ var START_DATE = "Sep 1 2017";
 var START_DATE_IN_RETARCORP = "Sep 1 2017";
 var END_DATE_IN_RETARCORP = "";
 
-bDate.innerText = getNumWithPrefix(getAge(), YEARS);
+bDate.innerText = " " + getNumWithPrefix(getAge(), YEARS);
 
 var worksGen = getWorkExperience(START_DATE);
 expAmt.innerText +=
