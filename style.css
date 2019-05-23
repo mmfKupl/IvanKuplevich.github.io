@@ -2,7 +2,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'PT Sans Caption', sans-serif;
 	font-size: 14px;
 }
 
@@ -16,6 +16,10 @@ a:hover {
 	cursor: pointer;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	color: #000;
+}
+
 h1 {
 	font-size: 25px;
 }
@@ -23,8 +27,15 @@ h2 {
 	font-size: 20px;
 }
 h3 {
+	font-size: 18px;
+}
+h4 {
+	font-size: 16px;
+}
+footer h4 {
 	font-size: 12px;
 }
+
 
 body {
 	width: 100vw;
@@ -36,13 +47,7 @@ body {
 
 header, main, footer {
 	width: 75%;
-	padding: 10px 0;
-}
-
-@media (max-width: 800px) {
-	header, main, footer {
-		width: 100%;
-	}
+	padding: 10px 5px;
 }
 
 header {
@@ -50,7 +55,7 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
+	background-color: #fcfcfc;
 }
 
 header > p {
@@ -62,9 +67,9 @@ main {
 }
 
 footer {
-	min-height: 20px;
+	min-height: 10px;
 	border-top: 1px solid #dcdbdb;
-	background-color: #fdfdfd;
+	background-color: #fcfcfc;
 	padding: 5px 20px 7px;
 	align-items: center;
 	display: flex;
@@ -72,14 +77,85 @@ footer {
 
 footer > a {
 	padding: 0 20px;
+	margin-top: 2px;
 	display: inline-flex;
 }
 
-.header-left {
+.header-right {
 	text-align: right;
 	align-self: flex-end;
 }
 
+.header-left {
+	padding-right: 15px;
+}
+
 span.i {
 	margin-right: 5px;
+}
+
+section.about {
+	margin-top: 20px;
+}
+section.about h3 {
+	color: #515151;
+}
+
+section.work-place {
+	display: flex;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+
+div.work-date {
+	max-width: 150px;
+	margin-right: 20px;
+}
+div.work-date h4 {
+	font-size: 15px;
+	font-weight: 500;
+}
+div.work-date p {
+	font-size: 13px;
+	font-weight: 500;
+	color: gray;
+}
+div.place-role h4 {
+	margin-bottom: 5px;
+}
+
+
+@media (max-width: 800px) {
+	header, main, footer {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px; 
+	}
+}
+
+@media (max-width: 410px) {
+	header {
+		flex-wrap: wrap;
+	}
+	.header-right {
+		text-align: left;
+		/* margin-top: 5px; */
+	}
+	.header-left > p, .header-right p {
+		margin-top: 5px;
+	}	
+	footer > a {
+		padding: 0 ;
+	}
+	footer {
+		justify-content: space-around;
+		align-content: center;
+		padding-bottom: 5px;
+	}
+}
+
+@media print {
+	footer {
+		display: none;
+	}
 }

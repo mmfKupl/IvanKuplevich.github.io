@@ -6,68 +6,59 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Ivan Kuplevich</title>
 	<link rel="stylesheet" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+	
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/brands.css" integrity="sha384-i2PyM6FMpVnxjRPi0KW/xIS7hkeSznkllv+Hx/MtYDaHA5VcF0yL3KVlvzp8bWjQ" crossorigin="anonymous">
+
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
 </head>
 <body>
 	<header>
-		<div class="header-right">
+		<div class="header-left">
 			<a target="new" href="https://www.linkedin.com/in/ivan-kuplevich/">
 				<h1>Куплеви Иван Александрович</h1>
 			</a>
 			<p>мужчина, <span id="bDate"></span>, 18.11.1997.</p>
 		</div>
-		<div class="header-left">
+		<div class="header-right">
 			<a href="mailto:ivan.kuplevich.w@gmail.com" type="phone"><p>ivan.kuplevich.w@gmail.com</p></a>
 			<a href="tel:80295431322" type="phone"><p class="p_tel">+375 (29) 543-13-22</p></a>
 		</div>
 	</header>
 	<main>
 		<h2>Full Stack Developer</h2>
+		<section class="about about-work">
+			<h3 id="expAmt">Опыт работы</h3>
+			<section class="work-place">
+				<div class="work-date">
+					<h4 id="retarcorpDate"></h4>
+					<p id="retarcorpAmt"></p>
+				</div>
+				<div class="place-role">
+					<a target="new" href="https://retarcorp.by/"><h4>Retarcorp</h4></a>
+					<h4>Full Stack JS Developer</h4>
+				</div>
 
+
+			</section>
+		</section>
+		<!-- <section class="about about-education">
+			<h3>Образование</h3>
+		</section> -->
 	</main>
 	<footer>
 		<a target="new" href="https://www.linkedin.com/in/ivan-kuplevich/">
-			<span class="i"><i class="fab fa-linkedin"></i></span><h3>LinkedIn</h3>
+			<span class="i"><i class="fab fa-linkedin"></i></span><h4>LinkedIn</h4>
 		</a>
 		<a target="new" href="https://github.com/mmfKupl">
-			<span class="i"><i class="fab fa-github"></i></span><h3>GitHub</h3>
+			<span class="i"><i class="fab fa-github"></i></span><h4>GitHub</h4>
 		</a>
 		<a target="new" href="https://t.me/Kupll">
-			<span class="i"><i class="fab fa-telegram"></i></span><h3>telegram</h3>
+			<span class="i"><i class="fab fa-telegram"></i></span><h4>telegram</h4>
 		</a>
-		<!-- <a target="new" href="">
-			<span class="i"></span>	<h3>jobs.tut.by</h3>
-		</a> -->
 	</footer>
 </body>
 
-<script type="text/javascript">
-	bDate.innerText = getAgeWithPrefix(getAge());
-
-	function getAge() {
-		var now = new Date();
-		var b = new Date("Nov 18 1997");
-
-		var age = now.getFullYear() - b.getFullYear();
-		if (now.getMonth() < b.getMonth()) {
-			age--;
-		}
-		return age;
-	};
-
-	function getAgeWithPrefix(age) {
-		var strAge = age.toString();
-		var lastNum = Number(strAge[strAge.length - 1])
-		if (lastNum === 1) {
-			return strAge + ' год';
-		} 
-		if (lastNum >= 2 && lastNum <= 4) {
-			return strAge + ' года';
-		}
-		return strAge + ' лет';
-	}
-
-</script>
+<script type="text/javascript" src="script.js"></script>
 </html>
