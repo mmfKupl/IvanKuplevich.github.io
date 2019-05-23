@@ -170,7 +170,6 @@ section.section-skills span {
 	}
 	.header-right {
 		text-align: left;
-		/* margin-top: 5px; */
 	}
 	.header-left > p, .header-right p {
 		margin-top: 5px;
@@ -181,7 +180,7 @@ section.section-skills span {
 	footer {
 		justify-content: space-around;
 		align-content: center;
-		position: relative	;
+		/* position: relative	; */
 		/* padding-bottom: 5px; */
 	}
 	header {
@@ -195,10 +194,6 @@ section.section-skills span {
 
 	section.section-box {
 		margin-left: 10px;
-	}
-
-	main {
-		min-height: auto;
 	}
 }
 
