@@ -62,7 +62,8 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	background-color: var(--header-footer-color);
-	min-height: auto;
+	height: auto;
+	min-height: 70px;
 }
 
 header > p {
