@@ -42,51 +42,61 @@ var PR_SKILLS = [
   "Ajax",
   "React Router"
 ];
+
 if (!window.navigator.userAgent.includes("Mobile")) {
   var projectBoxes = document.querySelectorAll(".about-pojects .section-box");
   projectBoxes.forEach(box => {
     var data = [];
-    switch (box.getAttribute("data-project")) {
-      case "PR":
-        data = PR_SKILLS;
-        break;
-      case "BWS":
-        data = BWS_SKILLS;
-        break;
-      case "TB":
-        data = TB_SKILLS;
-        break;
-      case "OS":
-        data = OS_SKILLS;
-        break;
-    }
+    data = getCurrentData(box.getAttribute("data-project"));
     var spans = [];
     document.querySelectorAll("span[data-skill]").forEach(span => {
       if (data.includes(span.getAttribute("data-skill"))) {
         spans.push(span);
       }
     });
-    box.addEventListener("mouseover", e => {
+    box.addEventListener("mouseenter", e => {
       var skillsBox = document.querySelector("section.about-skills");
       var top = skillsBox.offsetTop;
       var bot = top + skillsBox.offsetHeight * 0.5;
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if (bot < scrollTop) {
-        document.body.appendChild(getSpanList(data));
+        var p = getSpanList(data, "span-list-fixed");
+        document.body.appendChild(p);
+        setTimeout(() => {
+          p.style.top = "0";
+        }, 0);
       } else {
         spans.forEach(span => {
           span.classList.add("span-marked");
         });
       }
     });
-    box.addEventListener("mouseout", e => {
-      document.querySelectorAll(".span-list-fixed").forEach(el => el.remove());
+    box.addEventListener("mouseleave", e => {
+      var p = document.querySelectorAll(".span-list-fixed");
+      p.forEach(el => {
+        el.style.top = "-100px";
+      });
+      p.forEach(el => {
+        setTimeout(() => {
+          el.remove();
+        }, 500);
+      });
       spans.forEach(span => {
         span.classList.remove("span-marked");
       });
     });
   });
 } else {
+  var dataProjects = document.querySelectorAll("section[data-project]");
+  dataProjects.forEach(dataProject => {
+    var data = getCurrentData(dataProject.getAttribute("data-project"));
+    if (!data.length) {
+      return;
+    }
+    var p = getSpanList(data, "span-list-mobile");
+    var h5p = dataProject.querySelector("h5 + p");
+    dataProject.querySelector(".place-role").insertBefore(p, h5p);
+  });
 }
 
 bDate.innerText = " " + getNumWithPrefix(getAge(), YEARS);
@@ -190,13 +200,31 @@ function getMonthName(number) {
   }
 }
 
-function getSpanList(spans) {
+function getSpanList(spans, style) {
   var p = document.createElement("p");
   spans = spans.forEach(span => {
     var spanNode = document.createElement("span");
     spanNode.innerText = span;
     p.appendChild(spanNode);
   });
-  p.classList.add("span-list-fixed");
+  p.classList.add(style);
   return p;
+}
+
+function removeAllAttr(elements, attr) {
+  elements.forEach(el => el.removeAttribute(attr));
+}
+
+function getCurrentData(attr) {
+  switch (attr) {
+    case "PR":
+      return PR_SKILLS;
+    case "BWS":
+      return BWS_SKILLS;
+    case "TB":
+      return TB_SKILLS;
+    case "OS":
+      return OS_SKILLS;
+  }
+  return [];
 }

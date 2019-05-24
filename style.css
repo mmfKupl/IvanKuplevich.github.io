@@ -4,6 +4,7 @@
 	box-sizing: border-box;
 	font-family: 'PT Sans Caption', sans-serif;
 	font-size: 14px;
+	overflow-x:	 hidden;
 }
 
 :root {
@@ -40,7 +41,6 @@ h4 {
 footer h4 {
 	font-size: 0.9rem;
 }
-
 
 body {
 	width: 100vw;
@@ -204,7 +204,7 @@ p.span-list-fixed {
 	display: flex;
 	flex-wrap: wrap;
 	position: fixed;
-	top: 0;
+	top: -100px;
 	left: 0;
 	text-align: center;
 	justify-content: center;
@@ -212,8 +212,24 @@ p.span-list-fixed {
 }
 
 p.span-list-fixed span {
-	margin-top: 15px;
+	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+p.span-list-mobile {
+	display: inline-flex;
+	flex-wrap: wrap;
+	margin: 5px 0;
+}
+
+p.span-list-mobile span {
+	margin: 1.5px 4px 1.5px 0;
+	font-size: 0.65rem;
+	display: inline-block;
+	padding: 1.5px 4px;
+	background-color: #eee;
+	border-radius: 5px; 
+	color: #313131;
 }
 
 h4 span {
@@ -231,6 +247,10 @@ h4 span {
 		width: 100%;
 		padding-left: 20px;
 		padding-right: 20px; 
+	}
+	
+	div.place-role h5 {
+		margin-bottom: 3px;
 	}
 }
 
