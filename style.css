@@ -280,7 +280,11 @@ h4 span {
 	div.section-date {
 		min-width: 90px;
 		max-width: 90px;
-		margin-right: 25px;
+		margin-right: 15px;
+	}
+
+	div.section-date p {
+		word-wrap: break-word;
 	}
 
 	section.section-box {
