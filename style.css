@@ -278,9 +278,9 @@ h4 span {
 	}
 	
 	div.section-date {
-		min-width: 75px;
-		max-width: 75px;
-		margin-right: 35px;
+		min-width: 90px;
+		max-width: 90px;
+		margin-right: 25px;
 	}
 
 	section.section-box {
