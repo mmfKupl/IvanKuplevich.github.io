@@ -152,7 +152,8 @@ section.section-skills {
 	flex-wrap: wrap;
 }
 
-section.section-skills span {
+section.section-skills span, p.span-list-fixed span {
+	transition: all 1s ease 0s;
 	display: inline-block;
 	padding: 3px 10px;
 	background-color: #eee;
@@ -170,10 +171,14 @@ section.about-myself section.section-box {
 	display: block;
 }
 
-section.about-myself h3, section.about-pojects h3 {
+section.about-myself h3{
 	text-align: center;
 	color: #000;
 }
+
+section.about-pojects h3 {
+	color: #000;
+} 
 
 section.about-myself p {
 	text-indent: 3rem; 
@@ -182,6 +187,40 @@ section.about-myself p {
 	color: #030303;
 }
 
+section.section-box.section-slider {
+	width: auto;
+	height: 50px;
+	background-color: #000;
+}
+
+section.section-box.section-skills span.span-marked {
+	background-color: #fab1a0;
+}
+
+p.span-list-fixed {
+	width: 100%;
+	transition: all 1s ease 0s;
+	background-color: var(--header-footer-color);
+	display: flex;
+	flex-wrap: wrap;
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-align: center;
+	justify-content: center;
+	box-shadow: 0 5px 6px 4px rgba(0, 0, 0, .2)
+}
+
+p.span-list-fixed span {
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+h4 span {
+	color: #000;
+	font-size: 1.2rem;
+	font-weight: 500;
+}
 
 @media (max-width: 800px) {
 	* {
@@ -195,7 +234,7 @@ section.about-myself p {
 	}
 }
 
-@media (max-width: 410px) {
+@media (max-width: 420px) {
 	header {
 		flex-wrap: wrap;
 		min-height: 140px;
@@ -221,7 +260,7 @@ section.about-myself p {
 	div.section-date {
 		min-width: 75px;
 		max-width: 75px;
-		margin-right: 25px;
+		margin-right: 35px;
 	}
 
 	section.section-box {

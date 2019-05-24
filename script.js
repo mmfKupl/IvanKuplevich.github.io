@@ -4,6 +4,91 @@ var START_DATE = "Sep 1 2017";
 var START_DATE_IN_RETARCORP = "Sep 1 2017";
 var END_DATE_IN_RETARCORP = "";
 
+var BWS_SKILLS = [
+  "JavaScript",
+  "HTML",
+  "Git",
+  "ESLint",
+  "Prettier",
+  "Webpack",
+  "CSS",
+  "Ajax"
+];
+
+var TB_SKILLS = [
+  "Vue",
+  "JavaScript",
+  "MongoDB",
+  "REST API",
+  "Express",
+  "Git",
+  "Node.js",
+  "ESLint",
+  "Prettier",
+  "Ajax"
+];
+
+var OS_SKILLS = ["HTML", "CSS", "JavaScript", "ESLint", "Prettier"];
+var PR_SKILLS = [
+  "Git",
+  "JavaScript",
+  "React",
+  "Golang",
+  "REST API",
+  "ESLint",
+  "Prettier",
+  "SQL",
+  "Redux",
+  "Ajax",
+  "React Router"
+];
+if (!window.navigator.userAgent.includes("Mobile")) {
+  var projectBoxes = document.querySelectorAll(".about-pojects .section-box");
+  projectBoxes.forEach(box => {
+    var data = [];
+    switch (box.getAttribute("data-project")) {
+      case "PR":
+        data = PR_SKILLS;
+        break;
+      case "BWS":
+        data = BWS_SKILLS;
+        break;
+      case "TB":
+        data = TB_SKILLS;
+        break;
+      case "OS":
+        data = OS_SKILLS;
+        break;
+    }
+    var spans = [];
+    document.querySelectorAll("span[data-skill]").forEach(span => {
+      if (data.includes(span.getAttribute("data-skill"))) {
+        spans.push(span);
+      }
+    });
+    box.addEventListener("mouseover", e => {
+      var skillsBox = document.querySelector("section.about-skills");
+      var top = skillsBox.offsetTop;
+      var bot = top + skillsBox.offsetHeight * 0.5;
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (bot < scrollTop) {
+        document.body.appendChild(getSpanList(data));
+      } else {
+        spans.forEach(span => {
+          span.classList.add("span-marked");
+        });
+      }
+    });
+    box.addEventListener("mouseout", e => {
+      document.querySelectorAll(".span-list-fixed").forEach(el => el.remove());
+      spans.forEach(span => {
+        span.classList.remove("span-marked");
+      });
+    });
+  });
+} else {
+}
+
 bDate.innerText = " " + getNumWithPrefix(getAge(), YEARS);
 
 var worksGen = getWorkExperience(START_DATE);
@@ -103,4 +188,15 @@ function getMonthName(number) {
     default:
       return "";
   }
+}
+
+function getSpanList(spans) {
+  var p = document.createElement("p");
+  spans = spans.forEach(span => {
+    var spanNode = document.createElement("span");
+    spanNode.innerText = span;
+    p.appendChild(spanNode);
+  });
+  p.classList.add("span-list-fixed");
+  return p;
 }
