@@ -142,6 +142,12 @@ div.section-date p, div.place-role p {
 	font-weight: 500;
 	color: gray;
 }
+
+div.section-date p.in_progress {
+	color: #00ac27;
+	font-size: 0.9rem;
+}
+
 div.place-role p {
 	margin-top: 3px;
 }
@@ -154,6 +160,7 @@ div.place-role a h4:hover {
 div.place-role h4:first-child {
 	margin-bottom: 3px;
 }
+
 
 section.section-skills {
 	/* background-color: #fafafa; */
@@ -230,7 +237,7 @@ p.span-list-fixed span {
 p.span-list-mobile {
 	display: inline-flex;
 	flex-wrap: wrap;
-	margin: 3px 0;
+	margin: 3px 0 4px;
 }
 
 p.span-list-mobile span {
@@ -326,14 +333,9 @@ h4 span {
 		text-align: right;
 	}
 
-	/* footer > a {
-		padding: 0 ;
-	} */
 	footer {
 		justify-content: space-around;
 		align-content: center;
-		/* position: relative	; */
-		/* padding-bottom: 5px; */
 	}
 
 	section.about-education div.section-date {
@@ -365,6 +367,10 @@ h4 span {
 
 	div.place-role h5 {
 		margin-bottom: 15px;
+	}
+
+	footer > a {
+		padding: 0 13px;
 	}
 }
 

@@ -1,10 +1,41 @@
 var YEARS = [" год", " года", " лет"];
-var YEARS_ENG = [" years old", " years old", " years old"];
-var MONTH = [" месяц", " месяца", " месяцев"];
-var MONTH_ENG = [" month", " months", " months"];
+var YEARS_ENG = [" years", " years", " years"];
+var MONTHES = [" месяц", " месяца", " месяцев"];
+var MONTHES_ENG = [" month", " months", " months"];
 var START_DATE = "Sep 1 2017";
 var START_DATE_IN_RETARCORP = "Sep 1 2017";
 var END_DATE_IN_RETARCORP = "";
+var END_PHRAZE = " по настоящее время";
+var END_PHRAZE_ENG = " till now";
+var MONTH = [
+  "Январь",
+  "Февраль",
+  "Март",
+  "Апрель",
+  "Май",
+  "Июнь",
+  "Июль",
+  "Август",
+  "Сентябрь",
+  "Октябрь",
+  "Ноябрь",
+  "Декабрь"
+];
+
+var MONTH_ENG = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
 
 var BWS_SKILLS = [
   "JavaScript",
@@ -49,6 +80,8 @@ var PR_SKILLS = [
 var curLang = checkLanguage();
 if (curLang == "en") {
   YEARS = YEARS_ENG;
+  MONTHES = MONTHES_ENG;
+  END_PHRAZE = END_PHRAZE_ENG;
   MONTH = MONTH_ENG;
 }
 
@@ -129,7 +162,7 @@ expAmt.innerText +=
   " " +
   getNumWithPrefix(worksGen.next().value, YEARS) +
   " " +
-  getNumWithPrefix(worksGen.next().value, MONTH);
+  getNumWithPrefix(worksGen.next().value, MONTHES);
 
 var retarcorpsGen = getWorkExperience(START_DATE_IN_RETARCORP);
 retarcorpDate.innerText = getWorkPeriode(
@@ -140,7 +173,7 @@ retarcorpAmt.innerText +=
   " " +
   getNumWithPrefix(retarcorpsGen.next().value, YEARS) +
   " " +
-  getNumWithPrefix(retarcorpsGen.next().value, MONTH);
+  getNumWithPrefix(retarcorpsGen.next().value, MONTHES);
 // };
 
 function getAge() {
@@ -183,7 +216,7 @@ function* getWorkExperience(from = "") {
 
 function getWorkPeriode(start, end) {
   if (end === "") {
-    end = " по настоящее время";
+    end = END_PHRAZE;
   } else {
     end = getMonthName(new Date(end).getMonth());
   }
@@ -194,34 +227,10 @@ function getWorkPeriode(start, end) {
 }
 
 function getMonthName(number) {
-  switch (number) {
-    case 0:
-      return "Январь";
-    case 1:
-      return "Февраль";
-    case 2:
-      return "Март";
-    case 3:
-      return "Апрель";
-    case 4:
-      return "Май";
-    case 5:
-      return "Июнь";
-    case 6:
-      return "Июль";
-    case 7:
-      return "Август";
-    case 8:
-      return "Сентябрь";
-    case 9:
-      return "Октябрь";
-    case 10:
-      return "Ноябрь";
-    case 11:
-      return "Декабрь";
-    default:
-      return "";
+  if (number >= MONTH.length) {
+    return "";
   }
+  return MONTH[number];
 }
 
 function getSpanList(spans, style) {
