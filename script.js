@@ -101,7 +101,7 @@ if (!window.navigator.userAgent.includes("Mobile")) {
   if (window.screen.availWidth <= 420) {
     var header = document.querySelector("header");
     var main = document.querySelector("main");
-    main.style.marginTop = header.offsetHeight + "px";
+    main.style.marginTop = header.offsetHeight + 5 + "px";
 
     var swapSections = document.querySelectorAll(".section-mob-swap");
     console.log(swapSections);

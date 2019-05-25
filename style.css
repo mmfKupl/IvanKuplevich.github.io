@@ -63,6 +63,7 @@ header {
 	background-color: var(--header-footer-color);
 	height: auto;
 	min-height: 70px;
+	left: 0;
 }
 
 header > p {
@@ -133,6 +134,9 @@ div.section-date p, div.place-role p {
 	font-weight: 500;
 	color: gray;
 }
+div.place-role p {
+	margin-top: 3px;
+}
 div.place-role a h4 {
 	color: #1a0dab;
 }
@@ -140,7 +144,7 @@ div.place-role a h4:hover {
 	text-decoration: underline #1a0dab;
 }
 div.place-role h4:first-child {
-	margin-bottom: 5px;
+	margin-bottom: 3px;
 }
 
 section.section-skills {
@@ -237,9 +241,17 @@ h4 span {
 	font-weight: 500;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1800px) {
 	* {
-		font-size: 20px;
+		font-size: 25px;
+	}
+	div.section-date {
+    max-width: 300px;
+    min-width: 300px;
+    margin-right: 20px;
+	}
+	header {
+		min-height: 8%;
 	}
 }
 
@@ -264,6 +276,10 @@ h4 span {
 		font-size: 12px;
 	}
 
+	.header-right a p {
+		font-size: 0.9rem;
+	}
+
 	header {
 		flex-wrap: wrap;
 		min-height: auto;
@@ -273,12 +289,6 @@ h4 span {
 	main {
 		margin-top: auto;
 	}
-
-	/* header.fixed-header {
-		position: fixed;
-		top: 0;
-
-	} */
 
 	.header-right {
 		text-align: left;
@@ -297,6 +307,7 @@ h4 span {
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 
 	.place-role .section-date ~ h4, 
@@ -314,10 +325,14 @@ h4 span {
 		/* position: relative	; */
 		/* padding-bottom: 5px; */
 	}
+
+	section.about-education div.section-date {
+		min-width: 90px;
+		max-width: 90px;
+	}
 	
 	div.section-date {
 		min-width: 90px;
-		/* max-width: 90px; */
 		margin-right: 15px;
 		float: left;
 		margin-bottom: 5px;
@@ -340,6 +355,38 @@ h4 span {
 
 	div.place-role h5 {
 		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 320px) {
+	* {
+		font-size: 11px;
+	}
+
+	h1 {
+		font-size: 1.5rem;
+	}
+	div.place-role h5 {
+		margin-bottom: 10px;
+	}
+	div.section-date {
+		min-width: 120px;
+		max-width: 120px;
+	}
+
+	.about-work div.section-date, 
+	.about-education div.section-date {
+		min-width: 80px;
+    max-width: 80px;
+	}
+	
+	section.section-skills.section-box {
+		padding: 0;
+		margin: 3px 0;
+	}
+	section.section-skills span {
+		padding: 2px 7px;
+		font-size: 0.85rem;
 	}
 }
 
