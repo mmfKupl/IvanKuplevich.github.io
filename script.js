@@ -1,5 +1,7 @@
 var YEARS = [" год", " года", " лет"];
+var YEARS_ENG = [" years old", " years old", " years old"];
 var MONTH = [" месяц", " месяца", " месяцев"];
+var MONTH_ENG = [" month", " months", " months"];
 var START_DATE = "Sep 1 2017";
 var START_DATE_IN_RETARCORP = "Sep 1 2017";
 var END_DATE_IN_RETARCORP = "";
@@ -42,6 +44,13 @@ var PR_SKILLS = [
   "Ajax",
   "React Router"
 ];
+
+// window.onload = function() {
+var curLang = checkLanguage();
+if (curLang == "en") {
+  YEARS = YEARS_ENG;
+  MONTH = MONTH_ENG;
+}
 
 if (!window.navigator.userAgent.includes("Mobile")) {
   var projectBoxes = document.querySelectorAll(".about-pojects .section-box");
@@ -132,6 +141,7 @@ retarcorpAmt.innerText +=
   getNumWithPrefix(retarcorpsGen.next().value, YEARS) +
   " " +
   getNumWithPrefix(retarcorpsGen.next().value, MONTH);
+// };
 
 function getAge() {
   var now = new Date();
@@ -242,3 +252,13 @@ function getCurrentData(attr) {
   }
   return [];
 }
+
+function checkLanguage() {
+  var href = window.location.href;
+  if (href.includes("en")) {
+    return "en";
+  }
+  return "ru";
+}
+
+function setLanguage() {}

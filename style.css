@@ -93,6 +93,14 @@ footer > a {
 	display: inline-flex;
 }
 
+footer > span.right {
+	margin-left: auto;
+	padding: 0 10px 0;
+} 
+footer > a.right1 {
+	padding: 0 10px;
+} 
+
 .header-right {
 	text-align: right;
 	align-self: flex-end;
@@ -284,6 +292,8 @@ h4 span {
 		flex-wrap: wrap;
 		min-height: auto;
 		position: fixed;
+		padding-top: 5px;
+		padding-bottom: 5px;
 	}
 
 	main {
@@ -295,11 +305,11 @@ h4 span {
 		align-self: auto;
 	}
 	.header-left > p, .header-right p {
-		margin-top: 5px;
+		margin-top: 2px;
 	}	
-	.header-left p {
+	/* .header-left p {
 		display: none;
-	}
+	} */
 	.header-right a {
 		display: inline-block;
 	}
@@ -316,9 +326,9 @@ h4 span {
 		text-align: right;
 	}
 
-	footer > a {
+	/* footer > a {
 		padding: 0 ;
-	}
+	} */
 	footer {
 		justify-content: space-around;
 		align-content: center;
@@ -387,6 +397,14 @@ h4 span {
 	section.section-skills span {
 		padding: 2px 7px;
 		font-size: 0.85rem;
+	}
+
+	footer > a {
+		padding: 0 10px;
+	}
+
+	section.about {
+		margin-top: 12	px;
 	}
 }
 
