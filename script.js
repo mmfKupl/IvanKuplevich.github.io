@@ -97,6 +97,18 @@ if (!window.navigator.userAgent.includes("Mobile")) {
     var h5p = dataProject.querySelector("h5 + p");
     dataProject.querySelector(".place-role").insertBefore(p, h5p);
   });
+
+  var header = document.querySelector("header");
+  var main = document.querySelector("main");
+  main.style.marginTop = header.offsetHeight + "px";
+
+  var swapSections = document.querySelectorAll(".section-mob-swap");
+  console.log(swapSections);
+  swapSections.forEach(el => {
+    var dateS = el.querySelector(".section-date");
+    var roleS = el.querySelector(".place-role");
+    roleS.insertBefore(dateS, roleS.firstChild);
+  });
 }
 
 bDate.innerText = " " + getNumWithPrefix(getAge(), YEARS);

@@ -4,7 +4,6 @@
 	box-sizing: border-box;
 	font-family: 'PT Sans Caption', sans-serif;
 	font-size: 14px;
-	overflow-x:	 hidden;
 }
 
 :root {
@@ -257,9 +256,20 @@ h4 span {
 @media (max-width: 420px) {
 	header {
 		flex-wrap: wrap;
-		min-height: 140px;
-		height: auto;
+		min-height: auto;
+		position: fixed;
 	}
+
+	main {
+		margin-top: auto;
+	}
+
+	/* header.fixed-header {
+		position: fixed;
+		top: 0;
+
+	} */
+
 	.header-right {
 		text-align: left;
 		align-self: auto;
@@ -267,6 +277,24 @@ h4 span {
 	.header-left > p, .header-right p {
 		margin-top: 5px;
 	}	
+	.header-left p {
+		display: none;
+	}
+	.header-right a {
+		display: inline-block;
+	}
+	.header-right {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.place-role .section-date ~ h4, 
+	.place-role .section-date ~ a h4,
+	.place-role h5 {
+		text-align: right;
+	}
+
 	footer > a {
 		padding: 0 ;
 	}
@@ -279,8 +307,10 @@ h4 span {
 	
 	div.section-date {
 		min-width: 90px;
-		max-width: 90px;
+		/* max-width: 90px; */
 		margin-right: 15px;
+		float: left;
+		margin-bottom: 5px;
 	}
 
 	div.section-date p {
