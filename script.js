@@ -86,7 +86,10 @@ if (!window.navigator.userAgent.includes("Mobile")) {
       });
     });
   });
-} else {
+} else if (
+  window.navigator.userAgent.includes("Mobile") &&
+  window.screen.availWidth <= 420
+) {
   var dataProjects = document.querySelectorAll("section[data-project]");
   dataProjects.forEach(dataProject => {
     var data = getCurrentData(dataProject.getAttribute("data-project"));
