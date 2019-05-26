@@ -9,6 +9,7 @@
 :root {
 	--header-footer-color: #fdfdfd;
 	--border-color: #dcdbdb;
+	--link-color: #261c92;
 }
 
 a {
@@ -140,7 +141,16 @@ div.section-date h4 {
 div.section-date p, div.place-role p {
 	font-size: 0.95rem;
 	font-weight: 500;
-	color: gray;
+	color: #848484;
+}
+
+div.place-role p.summarize {
+	color: #3b3b3b;
+}
+
+div.place-role p a {
+	font-size: 0.95rem;
+	color: var(	--link-color);
 }
 
 div.section-date p.in_progress {
@@ -152,10 +162,10 @@ div.place-role p {
 	margin-top: 3px;
 }
 div.place-role a h4 {
-	color: #1a0dab;
+	color: var(	--link-color);
 }
 div.place-role a h4:hover {
-	text-decoration: underline #1a0dab;
+	text-decoration: underline var(	--link-color);
 }
 div.place-role h4:first-child {
 	margin-bottom: 3px;

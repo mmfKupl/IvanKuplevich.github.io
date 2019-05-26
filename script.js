@@ -39,41 +39,42 @@ var MONTH_ENG = [
 
 var BWS_SKILLS = [
   "JavaScript",
-  "HTML",
+  "Webpack",
   "Git",
   "ESLint",
   "Prettier",
-  "Webpack",
+  "HTML",
   "CSS",
   "Ajax"
 ];
 
 var TB_SKILLS = [
+  "Node.js",
+  "Express",
   "Vue",
   "JavaScript",
   "MongoDB",
   "REST API",
-  "Express",
   "Git",
-  "Node.js",
+  "Ajax",
   "ESLint",
-  "Prettier",
-  "Ajax"
+  "Prettier"
 ];
 
 var OS_SKILLS = ["HTML", "CSS", "JavaScript", "ESLint", "Prettier"];
 var PR_SKILLS = [
-  "Git",
   "JavaScript",
   "React",
   "Golang",
-  "REST API",
-  "ESLint",
-  "Prettier",
-  "SQL",
   "Redux",
+  "React Router",
+  "React Native",
+  "SQL",
+  "REST API",
+  "Git",
   "Ajax",
-  "React Router"
+  "Prettier",
+  "ESLint"
 ];
 
 // window.onload = function() {
