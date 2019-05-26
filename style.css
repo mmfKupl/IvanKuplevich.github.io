@@ -144,6 +144,15 @@ div.section-date p, div.place-role p {
 	color: #848484;
 }
 
+div.place-role {
+	/* overflow: hidden; */
+	/* max-height: 100px; */
+}
+
+div.place-role.expand {
+	max-height: 100%;
+}
+
 div.place-role p.summarize {
 	color: #3b3b3b;
 }

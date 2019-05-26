@@ -62,6 +62,7 @@ var TB_SKILLS = [
 ];
 
 var OS_SKILLS = ["HTML", "CSS", "JavaScript", "ESLint", "Prettier"];
+var OSG_SKILLS = ["Golang", "Git", "CSS", "HTML"];
 var PR_SKILLS = [
   "JavaScript",
   "React",
@@ -75,6 +76,15 @@ var PR_SKILLS = [
   "Ajax",
   "Prettier",
   "ESLint"
+];
+var W3W_SKILLS = [
+  "Heroku",
+  "JavaScript",
+  "Git",
+  "Web3",
+  "dApps",
+  "RIDE",
+  "React"
 ];
 
 // window.onload = function() {
@@ -177,6 +187,16 @@ retarcorpAmt.innerText +=
   getNumWithPrefix(retarcorpsGen.next().value, MONTHES);
 // };
 
+// var placeRoleItems = document.querySelectorAll(".place-role");
+// var checkBoxes = document.querySelectorAll(".expand-checkbox");
+
+// checkBoxes.forEach((el, i) => {
+//   el.addEventListener("change", e => {
+//     console.log(e.target.value);
+//     console.log(el.value, placeRoleItems[i]);
+//   });
+// });
+
 function getAge() {
   var now = new Date();
   var start = new Date("Nov 18 1997");
@@ -259,6 +279,10 @@ function getCurrentData(attr) {
       return TB_SKILLS;
     case "OS":
       return OS_SKILLS;
+    case "W3W":
+      return W3W_SKILLS;
+    case "OSG":
+      return OSG_SKILLS;
   }
   return [];
 }
