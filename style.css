@@ -42,8 +42,13 @@ h3 {
 h4 {
 	font-size: 1.2rem;
 }
+
 footer h4 {
 	font-size: 0.95rem;
+}
+
+h4.h4_aim {
+	text-align: center;
 }
 
 body {
@@ -129,6 +134,10 @@ section.about {
 }
 section.about h3 {
 	color: #515151;
+}
+
+section.about-education *~ div.place-role {
+	margin-bottom: 0;
 }
 
 section.section-box {
@@ -474,7 +483,7 @@ section.about.about-just-game .section-box canvas {
 		min-width: 90px;
 		max-width: 90px;
 	}
-	
+
 	div.section-date {
 		min-width: 90px;
 		margin-right: 15px;
