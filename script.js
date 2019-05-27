@@ -159,7 +159,6 @@ if (!window.navigator.userAgent.includes("Mobile")) {
     main.style.marginTop = header.offsetHeight + 5 + "px";
 
     var swapSections = document.querySelectorAll(".section-mob-swap");
-    console.log(swapSections);
     swapSections.forEach(el => {
       var dateS = el.querySelector(".section-date");
       var roleS = el.querySelector(".place-role");
@@ -221,18 +220,15 @@ placeRoleItems.forEach((el, i) => {
       return;
     }
     input.addEventListener("click", e => {
-      console.log("click", e);
       if (e.x === 0 && e.y === 0) {
         return;
       }
       isClick = true;
-      console.log(e);
       setTimeout(() => {
         e.target.blur();
       }, 1000);
     });
     input.addEventListener("focus", e => {
-      console.log("focus", e);
       var boxId = "";
       for (var i = 0; i < e.path.length; i++) {
         if (e.path[i].classList.contains("section-box")) {
