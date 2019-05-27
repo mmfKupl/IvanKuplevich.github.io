@@ -87,6 +87,8 @@ var W3W_SKILLS = [
   "React"
 ];
 
+var isClick = false;
+
 // window.onload = function() {
 var curLang = checkLanguage();
 if (curLang == "en") {
@@ -218,7 +220,19 @@ placeRoleItems.forEach((el, i) => {
     if (isMobile) {
       return;
     }
+    input.addEventListener("click", e => {
+      console.log("click", e);
+      if (e.x === 0 && e.y === 0) {
+        return;
+      }
+      isClick = true;
+      console.log(e);
+      setTimeout(() => {
+        e.target.blur();
+      }, 1000);
+    });
     input.addEventListener("focus", e => {
+      console.log("focus", e);
       var boxId = "";
       for (var i = 0; i < e.path.length; i++) {
         if (e.path[i].classList.contains("section-box")) {
@@ -226,7 +240,6 @@ placeRoleItems.forEach((el, i) => {
           break;
         }
       }
-      console.log(boxId);
       var data = getCurrentData(boxId);
       var spans = [];
       document.querySelectorAll("span[data-skill]").forEach(span => {
@@ -238,7 +251,10 @@ placeRoleItems.forEach((el, i) => {
       var top = skillsBox.offsetTop;
       var bot = top + skillsBox.offsetHeight * 0.5;
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (bot < scrollTop) {
+      if (
+        bot < scrollTop &&
+        document.querySelectorAll("p.span-list-fixed").length === 0
+      ) {
         var p = getSpanList(data, "span-list-fixed");
         document.body.appendChild(p);
         setTimeout(() => {
@@ -251,6 +267,10 @@ placeRoleItems.forEach((el, i) => {
       }
     });
     input.addEventListener("blur", e => {
+      if (isClick) {
+        isClick = false;
+        return;
+      }
       var boxId = "";
       for (var i = 0; i < e.path.length; i++) {
         if (e.path[i].classList.contains("section-box")) {
