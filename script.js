@@ -215,6 +215,9 @@ placeRoleItems.forEach((el, i) => {
       this.classList.toggle("checked");
     });
 
+    if (isMobile) {
+      return;
+    }
     input.addEventListener("focus", e => {
       var boxId = "";
       for (var i = 0; i < e.path.length; i++) {
