@@ -6,6 +6,7 @@
 	font-size: 14px;
 }
 
+
 :root {
 	--header-footer-color: #fdfdfd;
 	--border-color: #dcdbdb;
@@ -57,6 +58,7 @@ header, main, footer {
 }
 
 header {
+	z-index: 20;
 	border-bottom: 1px solid var(--border-color);
 	display: flex;
 	align-items: center;
@@ -144,13 +146,78 @@ div.section-date p, div.place-role p {
 	color: #848484;
 }
 
-div.place-role {
-	/* overflow: hidden; */
-	/* max-height: 100px; */
+
+div.place-role.hide {
+	overflow: hidden;
+	max-height: 100px;
 }
 
-div.place-role.expand {
-	max-height: 100%;
+div.place-role {
+	margin-bottom: 22px;
+}
+
+div.expand-checkbox-wrapper {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	bottom: 0;
+	box-shadow: 0 -16px 20px -6px rgba(0,0,0,0.2);
+	width: 100%;
+	padding-top: 10px;
+}
+div.expand-checkbox-wrapper.checked {
+	box-shadow: none;
+}
+input.expand-checkbox {
+	display: none;
+}	
+label.expand-label {
+	cursor: pointer;
+	width: 28px;
+	height: 10px;
+	background-color: #ececec;	
+	border-radius: 10px;
+	position: relative;
+	box-shadow: 0 0px 5px 2px rgba(0, 0, 0, .2);
+	transition: all 0.5s ease 0s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+label.expand-label:hover {
+	box-shadow: 0 0px 5px 5px #fab1a091;
+	background-color: #fab1a0a5;
+}
+
+label.expand-label:hover::after,
+label.expand-label:hover::before {
+	background-color: #fd8468
+}
+
+label.expand-label::after,
+label.expand-label::before {
+	content: "";
+	width: 20%;
+	height: 1px;
+	display: block;
+	background-color: #b2b2b2;
+	transition: all 0.5s ease 0s;
+}
+label.expand-label::after {
+	transform: rotate(-35deg);
+	margin-left: -0.6px;
+}
+label.expand-label::before {
+	transform: rotate(35deg);
+	margin-right: -0.6px;
+}
+
+input.expand-checkbox:checked ~ label::after {
+	transform: rotate(35deg);
+}
+input.expand-checkbox:checked ~ label::before {
+	transform: rotate(-35deg);
 }
 
 div.place-role p.summarize {
@@ -190,7 +257,7 @@ section.section-skills {
 }
 
 section.section-skills span, p.span-list-fixed span {
-	transition: all 1s ease 0s;
+	transition: background-color 1s ease 0s;
 	display: inline-block;
 	padding: 3px 10px;
 	background-color: #eee;
@@ -206,6 +273,9 @@ section.about-myself {
 section.about-myself section.section-box {
 	margin-left: 0;
 	display: block;
+}
+section.about.about-pojects .section-box {
+	position: relative;
 }
 
 section.about-myself h3{
@@ -224,12 +294,6 @@ section.about-myself p {
 	color: #030303;
 }
 
-section.section-box.section-slider {
-	width: auto;
-	height: 50px;
-	background-color: #000;
-}
-
 section.section-box.section-skills span.span-marked {
 	background-color: #fab1a0;
 }
@@ -245,7 +309,7 @@ p.span-list-fixed {
 	left: 0;
 	text-align: center;
 	justify-content: center;
-	box-shadow: 0 5px 6px 4px rgba(0, 0, 0, .2)
+	box-shadow: 0 5px 6px 4px rgba(0, 0, 0, .2);
 }
 
 p.span-list-fixed span {
@@ -274,6 +338,7 @@ h4 span {
 	font-size: 1.2rem;
 	font-weight: 500;
 }
+
 
 @media (min-width: 1800px) {
 	* {
@@ -322,8 +387,23 @@ h4 span {
 		padding-bottom: 5px;
 	}
 
+	label.expand-label:hover {
+		box-shadow: 0 0px 5px 5px #ffd9d091;
+		background-color: #ffd9d091;
+	}
+	
+	label.expand-label:hover::after,
+	label.expand-label:hover::before {
+		background-color: #fd836880
+	}
+
 	main {
 		margin-top: auto;
+	}
+
+	div.place-role.hide {
+		overflow: hidden;
+		max-height: 160px;
 	}
 
 	.header-right {
@@ -409,8 +489,8 @@ h4 span {
 		max-width: 120px;
 	}
 
-	.about-work div.section-date, 
-	.about-education div.section-date {
+	section.about-work div.section-date, 
+	section.about-education div.section-date {
 		min-width: 80px;
     max-width: 80px;
 	}

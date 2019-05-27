@@ -187,15 +187,35 @@ retarcorpAmt.innerText +=
   getNumWithPrefix(retarcorpsGen.next().value, MONTHES);
 // };
 
-// var placeRoleItems = document.querySelectorAll(".place-role");
-// var checkBoxes = document.querySelectorAll(".expand-checkbox");
+var placeRoleItems = document.querySelectorAll(
+  "section.about.about-pojects .section-box.section-mob-swap"
+);
+placeRoleItems.forEach((el, i) => {
+  var offsetH = el.offsetHeight;
+  var isMobile = window.navigator.userAgent.includes("Mobile");
+  if ((isMobile && offsetH >= 160) || (!isMobile && offsetH >= 100)) {
+    var placeRole = el.querySelector(".place-role");
+    placeRole.classList.add("hide");
+    var hideBtn = document.createElement("div");
+    var input = document.createElement("input");
+    var label = document.createElement("label");
+    var id = i + "_input";
+    input.id = id;
+    label.setAttribute("for", id);
+    label.classList.add("expand-label");
+    input.type = "checkbox";
+    hideBtn.classList.add("expand-checkbox-wrapper");
 
-// checkBoxes.forEach((el, i) => {
-//   el.addEventListener("change", e => {
-//     console.log(e.target.value);
-//     console.log(el.value, placeRoleItems[i]);
-//   });
-// });
+    input.classList.add("expand-checkbox");
+    hideBtn.appendChild(input);
+    hideBtn.appendChild(label);
+    el.appendChild(hideBtn);
+    hideBtn.addEventListener("change", function(e) {
+      placeRole.classList.toggle("hide");
+      this.classList.toggle("checked");
+    });
+  }
+});
 
 function getAge() {
   var now = new Date();
