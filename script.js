@@ -214,6 +214,67 @@ placeRoleItems.forEach((el, i) => {
       placeRole.classList.toggle("hide");
       this.classList.toggle("checked");
     });
+
+    input.addEventListener("focus", e => {
+      var boxId = "";
+      for (var i = 0; i < e.path.length; i++) {
+        if (e.path[i].classList.contains("section-box")) {
+          boxId = e.path[i].getAttribute("data-project");
+          break;
+        }
+      }
+      console.log(boxId);
+      var data = getCurrentData(boxId);
+      var spans = [];
+      document.querySelectorAll("span[data-skill]").forEach(span => {
+        if (data.includes(span.getAttribute("data-skill"))) {
+          spans.push(span);
+        }
+      });
+      var skillsBox = document.querySelector("section.about-skills");
+      var top = skillsBox.offsetTop;
+      var bot = top + skillsBox.offsetHeight * 0.5;
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (bot < scrollTop) {
+        var p = getSpanList(data, "span-list-fixed");
+        document.body.appendChild(p);
+        setTimeout(() => {
+          p.style.top = "0";
+        }, 0);
+      } else {
+        spans.forEach(span => {
+          span.classList.add("span-marked");
+        });
+      }
+    });
+    input.addEventListener("blur", e => {
+      var boxId = "";
+      for (var i = 0; i < e.path.length; i++) {
+        if (e.path[i].classList.contains("section-box")) {
+          boxId = e.path[i].getAttribute("data-project");
+          break;
+        }
+      }
+      var data = getCurrentData(boxId);
+      var spans = [];
+      document.querySelectorAll("span[data-skill]").forEach(span => {
+        if (data.includes(span.getAttribute("data-skill"))) {
+          spans.push(span);
+        }
+      });
+      var p = document.querySelectorAll(".span-list-fixed");
+      p.forEach(el => {
+        el.style.top = "-100px";
+      });
+      p.forEach(el => {
+        setTimeout(() => {
+          el.remove();
+        }, 500);
+      });
+      spans.forEach(span => {
+        span.classList.remove("span-marked");
+      });
+    });
   }
 });
 

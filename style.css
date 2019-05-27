@@ -176,8 +176,12 @@ div.expand-checkbox-wrapper.checked {
 	box-shadow: none;
 }
 input.expand-checkbox {
-	display: none;
+	/* display: none; */
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
 }	
+
 label.expand-label {
 	cursor: pointer;
 	width: 28px;
@@ -191,6 +195,17 @@ label.expand-label {
 	justify-content: center;
 	align-items: center;
 }
+
+input.expand-checkbox:focus + label.expand-label {
+	box-shadow: 0 0px 5px 5px #fab1a091;
+	background-color: #fab1a0a5;
+}	
+
+input.expand-checkbox:focus + label.expand-label::after,
+input.expand-checkbox:focus + label.expand-label::before  {
+	background-color: #fd8468;
+}	
+
 
 label.expand-label:hover {
 	box-shadow: 0 0px 5px 5px #fab1a091;
@@ -211,6 +226,7 @@ label.expand-label::before {
 	background-color: #b2b2b2;
 	transition: all 0.5s ease 0s;
 }
+
 label.expand-label::after {
 	transform: rotate(-35deg);
 	margin-left: -0.6px;
