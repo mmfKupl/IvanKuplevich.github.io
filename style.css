@@ -266,6 +266,10 @@ div.section-date p.in_progress {
 	color: #00ac27;
 	font-size: 0.9rem;
 }
+div.section-date p.in_freeze {
+	color: #1277bd;
+	font-size: 0.9rem;
+}
 
 div.place-role p {
 	margin-top: 3px;
