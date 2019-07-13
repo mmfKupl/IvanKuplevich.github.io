@@ -1,12 +1,15 @@
+html {
+	font-size: 17px;
+}
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 	font-family: 'PT Sans Caption', sans-serif;
 	/* font-family: 'Press Start 2P', cursive; */
-	font-size: 14px;
 	scroll-behavior: smooth;
-	scroll-margin-top: 100px;
+	scroll-margin-top: 7.14rem;
 }
 
 
@@ -48,7 +51,7 @@ footer h4 {
 }
 
 h4.h4_aim {
-	margin-top: 10px;
+	margin-top: 0.8rem;
 	text-align: center;
 }
 
@@ -62,8 +65,8 @@ body {
 }
 
 header, main, footer {
-	width: 75%;
-	padding: 10px 5px;
+	width: 60%;
+	padding: 0.8rem 0.4rem;
 }
 
 header {
@@ -74,8 +77,8 @@ header {
 	justify-content: space-between;
 	background-color: var(--header-footer-color);
 	height: auto;
-	min-height: 70px;
-	left: 0;
+	min-height: 5rem;
+	position: fixed;
 }
 
 header > p {
@@ -88,33 +91,34 @@ section.about-myself p a {
 
 main {
 	min-height: auto;
-	padding-bottom: 30px; 
+	padding-bottom: 2.5rem; 
+	margin-top: 8rem;
 }
 
 footer {
-	min-height: 10px;
+	min-height: 0.7rem;
 	border-top: 1px solid var(--border-color);
 	background-color: var(--header-footer-color);
-	padding: 5px 20px 7px;
+	padding: 0.35rem 1.4rem 0.5rem;
 	align-items: center;
 	display: flex;
-	min-height: 25px; 
+	min-height: 1.7rem; 
 	position: fixed;
 	bottom: 0;
 }
 
 footer > a {
-	padding: 0 20px;
-	margin-top: 2px;
+	padding: 0 1.4rem;
+	margin-top: 0.14rem;
 	display: inline-flex;
 }
 
 footer > span.right {
 	margin-left: auto;
-	padding: 0 10px 0;
+	padding: 0 0.7rem 0;
 } 
 footer > a.right1 {
-	padding: 0 10px;
+	padding: 0 0.7rem;
 } 
 
 .header-right {
@@ -123,15 +127,15 @@ footer > a.right1 {
 }
 
 .header-left {
-	padding-right: 15px;
+	padding-right: 1.1rem;
 }
 
 span.i {
-	margin-right: 5px;
+	margin-right: 0.35rem;
 }
 
 section.about {
-	margin-top: 20px;
+	margin-top: 1.4rem;
 }
 section.about h3 {
 	color: #515151;
@@ -143,15 +147,15 @@ section.about-education *~ div.place-role {
 
 section.section-box {
 	display: flex;
-	margin-left: 25px;
-	margin-top: 10px;
-	margin-bottom: 20px;
+	margin-left: 1.75rem;
+	margin-top: 0.7rem;
+	margin-bottom: 1.4rem;
 }
 
 div.section-date {
-	max-width: 150px;
-	min-width: 150px;
-	margin-right: 20px;
+	max-width: 10.7rem;
+	min-width: 10.7rem;
+	margin-right: 1.4rem;
 }
 div.section-date h4 {
 	font-size: 1.1rem;
@@ -160,17 +164,17 @@ div.section-date h4 {
 div.section-date p, div.place-role p {
 	font-size: 0.95rem;
 	font-weight: 500;
-	color: #656565;
+	color: #3a3a3a;
 }
 
 
 div.place-role.hide {
 	overflow: hidden;
-	max-height: 100px;
+	max-height: 7.2rem;
 }
 
 div.place-role {
-	margin-bottom: 22px;
+	margin-bottom: 1.57rem;
 }
 
 div.expand-checkbox-wrapper {
@@ -178,9 +182,9 @@ div.expand-checkbox-wrapper {
 	display: flex;
 	justify-content: center;
 	bottom: 0;
-	box-shadow: 0 -16px 20px -6px rgba(0,0,0,0.15);
+	box-shadow: 0 -1.14rem 1.4rem -0.42rem rgba(0,0,0,0.15);
 	width: 100%;
-	padding-top: 10px;
+	padding-top: 0.7rem;
 }
 div.expand-checkbox-wrapper.checked {
 	box-shadow: none;
@@ -194,12 +198,12 @@ input.expand-checkbox {
 
 label.expand-label {
 	cursor: pointer;
-	width: 28px;
-	height: 10px;
+	width: 2rem;
+	height: 0.7rem;
 	background-color: #ececec;	
-	border-radius: 10px;
+	border-radius: 0.7rem;
 	position: relative;
-	box-shadow: 0 0px 5px 2px rgba(0, 0, 0, .15);
+	box-shadow: 0 0rem 0.35rem 0.14rem rgba(0, 0, 0, .15);
 	transition: all 0.5s ease 0s;
 	display: flex;
 	justify-content: center;
@@ -207,7 +211,7 @@ label.expand-label {
 }
 
 input.expand-checkbox:focus + label.expand-label {
-	box-shadow: 0 0px 5px 5px #fab1a091;
+	box-shadow: 0 0rem 	0.35rem 0.35rem #fab1a091;
 	background-color: #fab1a0a5;
 }	
 
@@ -218,7 +222,7 @@ input.expand-checkbox:focus + label.expand-label::before  {
 
 
 label.expand-label:hover {
-	box-shadow: 0 0px 5px 5px #fab1a091;
+	box-shadow: 0 0rem 0.35rem 0.35rem #fab1a091;
 	background-color: #fab1a0a5;
 }
 
@@ -231,7 +235,7 @@ label.expand-label::after,
 label.expand-label::before {
 	content: "";
 	width: 20%;
-	height: 1px;
+	height: 0.07rem;
 	display: block;
 	background-color: #b2b2b2;
 	transition: all 0.5s ease 0s;
@@ -272,7 +276,7 @@ div.section-date p.in_freeze {
 }
 
 div.place-role p {
-	margin-top: 3px;
+	margin-top: 0.21rem;
 }
 div.place-role a h4 {
 	color: var(	--link-color);
@@ -281,31 +285,31 @@ div.place-role a h4:hover {
 	text-decoration: underline var(	--link-color);
 }
 div.place-role h4:first-child {
-	margin-bottom: 3px;
+	margin-bottom: 0.21rem;
 }
 
 
 section.section-skills {
 	/* background-color: #fafafa; */
-	padding: 0 10px;
+	padding: 0 0.7rem;
 	margin-left: 0;
-	border-radius: 5px; 
+	border-radius: 0.35rem; 
 	flex-wrap: wrap;
 }
 
 section.section-skills span, p.span-list-fixed span {
 	transition: background-color 1s ease 0s;
 	display: inline-block;
-	padding: 3px 10px;
+	padding: 0.2rem 0.7rem;
 	background-color: #eee;
-	border-radius: 5px; 
-	margin: 5px 5px;
+	border-radius: 0.35rem; 
+	margin: 0.35rem 0.35rem;
 	font-size: 0.95rem;
 	color: #313131;
 }
 
 section.about-myself {
-	margin-top: 35px;
+	margin-top: 2.5rem;
 }
 section.about-myself section.section-box {
 	margin-left: 0;
@@ -342,16 +346,16 @@ p.span-list-fixed {
 	display: flex;
 	flex-wrap: wrap;
 	position: fixed;
-	top: -100px;
+	top: -7.14rem;
 	left: 0;
 	text-align: center;
 	justify-content: center;
-	box-shadow: 0 5px 6px 4px rgba(0, 0, 0, .15);
+	box-shadow: 0 0.35rem 0.4rem 0.28rem rgba(0, 0, 0, .15);
 }
 
 p.span-list-fixed span {
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-top: 0.7rem;
+	margin-bottom: 0.7rem;
 }
 
 p.span-list-mobile {
@@ -387,14 +391,14 @@ section.about.about-just-game .section-box canvas {
 }
 
 
-@media (min-width: 1800px) {
-	* {
+@media (min-width: 2300px) {
+	html {
 		font-size: 25px;
 	}
 	div.section-date {
-    max-width: 300px;
-    min-width: 300px;
-    margin-right: 20px;
+    max-width: 21.4rem;
+    min-width: 21.4rem;
+    margin-right: 1.4rem;
 	}
 	header {
 		min-height: 8%;
@@ -402,14 +406,14 @@ section.about.about-just-game .section-box canvas {
 }
 
 @media (max-width: 800px) {
-	* {
-		font-size: 13px;
+	html {
+		font-size: 14px;
 	}
 
 	header, main, footer {
 		width: 100%;
-		padding-left: 20px;
-		padding-right: 20px; 
+		padding-left: 1.4rem;
+		padding-right: 1.4rem; 
 	}
 	
 	div.place-role h5 {
@@ -418,8 +422,8 @@ section.about.about-just-game .section-box canvas {
 }
 
 @media (max-width: 420px) {
-	* {
-		font-size: 12px;
+	html {
+		font-size: 14px;
 	}
 
 	.header-right a p {
@@ -428,8 +432,8 @@ section.about.about-just-game .section-box canvas {
 
 	header {
 		flex-wrap: wrap;
-		min-height: auto;
-		position: fixed;
+		/* min-height: auto; */
+		/* position: fixed; */
 		padding-top: 5px;
 		padding-bottom: 5px;
 	}
@@ -522,41 +526,41 @@ section.about.about-just-game .section-box canvas {
 
 @media (max-width: 320px) {
 	* {
-		font-size: 11px;
+		font-size: 0.785rem;
 	}
 
 	h1 {
 		font-size: 1.5rem;
 	}
 	div.place-role h5 {
-		margin-bottom: 10px;
+		margin-bottom: 0.7rem;
 	}
 	div.section-date {
-		min-width: 120px;
-		max-width: 120px;
+		min-width: 8.57rem;
+		max-width: 8.57rem;
 	}
 
 	section.about-work div.section-date, 
 	section.about-education div.section-date {
-		min-width: 80px;
-    max-width: 80px;
+		min-width: 5.7rem;
+    max-width: 5.7rem;
 	}
 	
 	section.section-skills.section-box {
 		padding: 0;
-		margin: 3px 0;
+		margin: 0.21rem 0;
 	}
 	section.section-skills span {
-		padding: 2px 7px;
+		padding: 0.14rem 	0.5rem;
 		font-size: 0.85rem;
 	}
 
 	footer > a {
-		padding: 0 10px;
+		padding: 0 0.7rem;
 	}
 
 	section.about {
-		margin-top: 12	px;
+		margin-top: 0.85rem;
 	}
 }
 

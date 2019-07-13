@@ -89,7 +89,6 @@ var W3W_SKILLS = [
 
 var isClick = false;
 
-// window.onload = function() {
 var curLang = checkLanguage();
 if (curLang == "en") {
   YEARS = YEARS_ENG;
@@ -98,73 +97,51 @@ if (curLang == "en") {
   MONTH = MONTH_ENG;
 }
 
-if (!window.navigator.userAgent.includes("Mobile")) {
-  var projectBoxes = document.querySelectorAll(".about-pojects .section-box");
-  projectBoxes.forEach(box => {
-    var data = [];
-    data = getCurrentData(box.getAttribute("data-project"));
-    var spans = [];
-    document.querySelectorAll("span[data-skill]").forEach(span => {
-      if (data.includes(span.getAttribute("data-skill"))) {
-        spans.push(span);
-      }
-    });
-    box.addEventListener("mouseenter", e => {
-      var skillsBox = document.querySelector("section.about-skills");
-      var top = skillsBox.offsetTop;
-      var bot = top + skillsBox.offsetHeight * 0.5;
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (bot < scrollTop) {
-        var p = getSpanList(data, "span-list-fixed");
-        document.body.appendChild(p);
-        setTimeout(() => {
-          p.style.top = "0";
-        }, 0);
-      } else {
-        spans.forEach(span => {
-          span.classList.add("span-marked");
-        });
-      }
-    });
-    box.addEventListener("mouseleave", e => {
-      var p = document.querySelectorAll(".span-list-fixed");
-      p.forEach(el => {
-        el.style.top = "-100px";
-      });
-      p.forEach(el => {
-        setTimeout(() => {
-          el.remove();
-        }, 500);
-      });
-      spans.forEach(span => {
-        span.classList.remove("span-marked");
-      });
-    });
-  });
-} else if (window.navigator.userAgent.includes("Mobile")) {
-  var dataProjects = document.querySelectorAll("section[data-project]");
-  dataProjects.forEach(dataProject => {
-    var data = getCurrentData(dataProject.getAttribute("data-project"));
-    if (!data.length) {
-      return;
+var projectBoxes = document.querySelectorAll(".about-pojects .section-box");
+projectBoxes.forEach(box => {
+  var data = [];
+  data = getCurrentData(box.getAttribute("data-project"));
+  var spans = [];
+  document.querySelectorAll("span[data-skill]").forEach(span => {
+    if (data.includes(span.getAttribute("data-skill"))) {
+      spans.push(span);
     }
-    var p = getSpanList(data, "span-list-mobile");
-    var h5p = dataProject.querySelector("h5 + p");
-    dataProject.querySelector(".place-role").insertBefore(p, h5p);
   });
-
-  if (window.screen.availWidth <= 420) {
-    var header = document.querySelector("header");
-    var main = document.querySelector("main");
-    main.style.marginTop = header.offsetHeight + 5 + "px";
-
-    var swapSections = document.querySelectorAll(".section-mob-swap");
-    swapSections.forEach(el => {
-      var dateS = el.querySelector(".section-date");
-      var roleS = el.querySelector(".place-role");
-      roleS.insertBefore(dateS, roleS.firstChild);
+  box.addEventListener("mouseenter", e => {
+    var skillsBox = document.querySelector("section.about-skills");
+    var top = skillsBox.offsetTop;
+    spans.forEach(span => {
+      span.classList.add("span-marked");
     });
+  });
+  box.addEventListener("mouseleave", e => {
+    spans.forEach(span => {
+      span.classList.remove("span-marked");
+    });
+  });
+});
+var dataProjects = document.querySelectorAll("section[data-project]");
+dataProjects.forEach(dataProject => {
+  var data = getCurrentData(dataProject.getAttribute("data-project"));
+  if (!data.length) {
+    return;
   }
+  var p = getSpanList(data, "span-list-mobile");
+  var h5p = dataProject.querySelector("h5 + p");
+  dataProject.querySelector(".place-role").insertBefore(p, h5p);
+});
+
+var header = document.querySelector("header");
+var main = document.querySelector("main");
+main.style.marginTop = header.offsetHeight + 5 + "px";
+
+if (window.screen.availWidth <= 420) {
+  var swapSections = document.querySelectorAll(".section-mob-swap");
+  swapSections.forEach(el => {
+    var dateS = el.querySelector(".section-date");
+    var roleS = el.querySelector(".place-role");
+    roleS.insertBefore(dateS, roleS.firstChild);
+  });
 }
 
 bDate.innerText = " " + getNumWithPrefix(getAge(), YEARS);
@@ -186,116 +163,7 @@ retarcorpAmt.innerText +=
   getNumWithPrefix(retarcorpsGen.next().value, YEARS) +
   " " +
   getNumWithPrefix(retarcorpsGen.next().value, MONTHES);
-// };
 
-var placeRoleItems = document.querySelectorAll(
-  "section.about.about-pojects .section-box.section-mob-swap"
-);
-placeRoleItems.forEach((el, i) => {
-  var offsetH = el.offsetHeight;
-  var isMobile = window.navigator.userAgent.includes("Mobile");
-  if ((isMobile && offsetH >= 160) || (!isMobile && offsetH >= 100)) {
-    var placeRole = el.querySelector(".place-role");
-    placeRole.classList.add("hide");
-    var hideBtn = document.createElement("div");
-    var input = document.createElement("input");
-    var label = document.createElement("label");
-    var id = i + "_input";
-    input.id = id;
-    label.setAttribute("for", id);
-    label.classList.add("expand-label");
-    input.type = "checkbox";
-    hideBtn.classList.add("expand-checkbox-wrapper");
-
-    input.classList.add("expand-checkbox");
-    hideBtn.appendChild(input);
-    hideBtn.appendChild(label);
-    el.appendChild(hideBtn);
-    hideBtn.addEventListener("change", function(e) {
-      placeRole.classList.toggle("hide");
-      this.classList.toggle("checked");
-    });
-
-    if (isMobile) {
-      return;
-    }
-    input.addEventListener("click", e => {
-      if (e.x === 0 && e.y === 0) {
-        return;
-      }
-      isClick = true;
-      setTimeout(() => {
-        e.target.blur();
-      }, 1000);
-    });
-    input.addEventListener("focus", e => {
-      var boxId = "";
-      for (var i = 0; i < e.path.length; i++) {
-        if (e.path[i].classList.contains("section-box")) {
-          boxId = e.path[i].getAttribute("data-project");
-          break;
-        }
-      }
-      var data = getCurrentData(boxId);
-      var spans = [];
-      document.querySelectorAll("span[data-skill]").forEach(span => {
-        if (data.includes(span.getAttribute("data-skill"))) {
-          spans.push(span);
-        }
-      });
-      var skillsBox = document.querySelector("section.about-skills");
-      var top = skillsBox.offsetTop;
-      var bot = top + skillsBox.offsetHeight * 0.5;
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      if (
-        bot < scrollTop &&
-        document.querySelectorAll("p.span-list-fixed").length === 0
-      ) {
-        var p = getSpanList(data, "span-list-fixed");
-        document.body.appendChild(p);
-        setTimeout(() => {
-          p.style.top = "0";
-        }, 0);
-      } else {
-        spans.forEach(span => {
-          span.classList.add("span-marked");
-        });
-      }
-    });
-    input.addEventListener("blur", e => {
-      if (isClick) {
-        isClick = false;
-        return;
-      }
-      var boxId = "";
-      for (var i = 0; i < e.path.length; i++) {
-        if (e.path[i].classList.contains("section-box")) {
-          boxId = e.path[i].getAttribute("data-project");
-          break;
-        }
-      }
-      var data = getCurrentData(boxId);
-      var spans = [];
-      document.querySelectorAll("span[data-skill]").forEach(span => {
-        if (data.includes(span.getAttribute("data-skill"))) {
-          spans.push(span);
-        }
-      });
-      var p = document.querySelectorAll(".span-list-fixed");
-      p.forEach(el => {
-        el.style.top = "-100px";
-      });
-      p.forEach(el => {
-        setTimeout(() => {
-          el.remove();
-        }, 500);
-      });
-      spans.forEach(span => {
-        span.classList.remove("span-marked");
-      });
-    });
-  }
-});
 
 function getAge() {
   var now = new Date();
@@ -310,6 +178,9 @@ function getAge() {
 function getNumWithPrefix(number, [_1, _2, _3]) {
   var strNumber = number.toString();
   var lastNum = Number(strNumber[strNumber.length - 1]);
+  if (number === 11) {
+    return strNumber + _3;
+  }
   if (lastNum === 1) {
     return strNumber + _1;
   }
@@ -395,4 +266,4 @@ function checkLanguage() {
   return "ru";
 }
 
-function setLanguage() {}
+function setLanguage() { }
