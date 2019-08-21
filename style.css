@@ -12,7 +12,6 @@ html {
 	scroll-margin-top: 7.14rem;
 }
 
-
 :root {
 	--header-footer-color: #fdfdfd;
 	--border-color: #dcdbdb;
@@ -21,7 +20,7 @@ html {
 
 a {
 	color: #000;
-	text-decoration: none;	
+	text-decoration: none;
 }
 
 a:hover {
@@ -29,7 +28,12 @@ a:hover {
 	cursor: pointer;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	color: #000;
 }
 
@@ -61,10 +65,12 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	overflow-x:	 hidden;
+	overflow-x: hidden;
 }
 
-header, main, footer {
+header,
+main,
+footer {
 	width: 60%;
 	padding: 0.8rem 0.4rem;
 }
@@ -91,7 +97,7 @@ section.about-myself p a {
 
 main {
 	min-height: auto;
-	padding-bottom: 2.5rem; 
+	padding-bottom: 2.5rem;
 	margin-top: 8rem;
 }
 
@@ -102,7 +108,7 @@ footer {
 	padding: 0.35rem 1.4rem 0.5rem;
 	align-items: center;
 	display: flex;
-	min-height: 1.7rem; 
+	min-height: 1.7rem;
 	position: fixed;
 	bottom: 0;
 }
@@ -116,10 +122,10 @@ footer > a {
 footer > span.right {
 	margin-left: auto;
 	padding: 0 0.7rem 0;
-} 
+}
 footer > a.right1 {
 	padding: 0 0.7rem;
-} 
+}
 
 .header-right {
 	text-align: right;
@@ -141,7 +147,7 @@ section.about h3 {
 	color: #515151;
 }
 
-section.about-education *~ div.place-role {
+section.about-education * ~ div.place-role {
 	margin-bottom: 0;
 }
 
@@ -161,12 +167,12 @@ div.section-date h4 {
 	font-size: 1.1rem;
 	font-weight: 500;
 }
-div.section-date p, div.place-role p {
+div.section-date p,
+div.place-role p {
 	font-size: 0.95rem;
 	font-weight: 500;
 	color: #3a3a3a;
 }
-
 
 div.place-role.hide {
 	overflow: hidden;
@@ -182,7 +188,7 @@ div.expand-checkbox-wrapper {
 	display: flex;
 	justify-content: center;
 	bottom: 0;
-	box-shadow: 0 -1.14rem 1.4rem -0.42rem rgba(0,0,0,0.15);
+	box-shadow: 0 -1.14rem 1.4rem -0.42rem rgba(0, 0, 0, 0.15);
 	width: 100%;
 	padding-top: 0.7rem;
 }
@@ -194,16 +200,16 @@ input.expand-checkbox {
 	appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-}	
+}
 
 label.expand-label {
 	cursor: pointer;
 	width: 2rem;
 	height: 0.7rem;
-	background-color: #ececec;	
+	background-color: #ececec;
 	border-radius: 0.7rem;
 	position: relative;
-	box-shadow: 0 0rem 0.35rem 0.14rem rgba(0, 0, 0, .15);
+	box-shadow: 0 0rem 0.35rem 0.14rem rgba(0, 0, 0, 0.15);
 	transition: all 0.5s ease 0s;
 	display: flex;
 	justify-content: center;
@@ -211,15 +217,14 @@ label.expand-label {
 }
 
 input.expand-checkbox:focus + label.expand-label {
-	box-shadow: 0 0rem 	0.35rem 0.35rem #fab1a091;
+	box-shadow: 0 0rem 0.35rem 0.35rem #fab1a091;
 	background-color: #fab1a0a5;
-}	
+}
 
 input.expand-checkbox:focus + label.expand-label::after,
-input.expand-checkbox:focus + label.expand-label::before  {
+input.expand-checkbox:focus + label.expand-label::before {
 	background-color: #fd8468;
-}	
-
+}
 
 label.expand-label:hover {
 	box-shadow: 0 0rem 0.35rem 0.35rem #fab1a091;
@@ -228,12 +233,12 @@ label.expand-label:hover {
 
 label.expand-label:hover::after,
 label.expand-label:hover::before {
-	background-color: #fd8468
+	background-color: #fd8468;
 }
 
 label.expand-label::after,
 label.expand-label::before {
-	content: "";
+	content: '';
 	width: 20%;
 	height: 0.07rem;
 	display: block;
@@ -263,7 +268,7 @@ div.place-role p.summarize {
 
 div.place-role p a {
 	font-size: 0.95rem;
-	color: var(	--link-color);
+	color: var(--link-color);
 }
 
 div.section-date p.in_progress {
@@ -279,30 +284,30 @@ div.place-role p {
 	margin-top: 0.21rem;
 }
 div.place-role a h4 {
-	color: var(	--link-color);
+	color: var(--link-color);
 }
 div.place-role a h4:hover {
-	text-decoration: underline var(	--link-color);
+	text-decoration: underline var(--link-color);
 }
 div.place-role h4:first-child {
 	margin-bottom: 0.21rem;
 }
 
-
 section.section-skills {
 	/* background-color: #fafafa; */
 	padding: 0 0.7rem;
 	margin-left: 0;
-	border-radius: 0.35rem; 
+	border-radius: 0.35rem;
 	flex-wrap: wrap;
 }
 
-section.section-skills span, p.span-list-fixed span {
+section.section-skills span,
+p.span-list-fixed span {
 	transition: background-color 1s ease 0s;
 	display: inline-block;
 	padding: 0.2rem 0.7rem;
 	background-color: #eee;
-	border-radius: 0.35rem; 
+	border-radius: 0.35rem;
 	margin: 0.35rem 0.35rem;
 	font-size: 0.95rem;
 	color: #313131;
@@ -319,17 +324,17 @@ section.about.about-pojects .section-box {
 	position: relative;
 }
 
-section.about-myself h3{
+section.about-myself h3 {
 	text-align: center;
 	color: #000;
 }
 
 section.about-pojects h3 {
 	color: #000;
-} 
+}
 
 section.about-myself p {
-	text-indent: 3rem; 
+	text-indent: 3rem;
 	text-align: justify;
 	font-size: 1.1rem;
 	color: #141414;
@@ -350,7 +355,7 @@ p.span-list-fixed {
 	left: 0;
 	text-align: center;
 	justify-content: center;
-	box-shadow: 0 0.35rem 0.4rem 0.28rem rgba(0, 0, 0, .15);
+	box-shadow: 0 0.35rem 0.4rem 0.28rem rgba(0, 0, 0, 0.15);
 }
 
 p.span-list-fixed span {
@@ -370,7 +375,7 @@ p.span-list-mobile span {
 	display: inline-block;
 	padding: 1.5px 4px;
 	background-color: #eee;
-	border-radius: 5px; 
+	border-radius: 5px;
 	color: #313131;
 }
 
@@ -390,15 +395,14 @@ section.about.about-just-game .section-box canvas {
 	border: 1px solid black;
 }
 
-
 @media (min-width: 2300px) {
 	html {
 		font-size: 25px;
 	}
 	div.section-date {
-    max-width: 21.4rem;
-    min-width: 21.4rem;
-    margin-right: 1.4rem;
+		max-width: 21.4rem;
+		min-width: 21.4rem;
+		margin-right: 1.4rem;
 	}
 	header {
 		min-height: 8%;
@@ -410,12 +414,14 @@ section.about.about-just-game .section-box canvas {
 		font-size: 14px;
 	}
 
-	header, main, footer {
+	header,
+	main,
+	footer {
 		width: 100%;
 		padding-left: 1.4rem;
-		padding-right: 1.4rem; 
+		padding-right: 1.4rem;
 	}
-	
+
 	div.place-role h5 {
 		margin-bottom: 3px;
 	}
@@ -442,10 +448,10 @@ section.about.about-just-game .section-box canvas {
 		box-shadow: 0 0px 5px 5px #ffd9d091;
 		background-color: #ffd9d091;
 	}
-	
+
 	label.expand-label:hover::after,
 	label.expand-label:hover::before {
-		background-color: #fd836880
+		background-color: #fd836880;
 	}
 
 	main {
@@ -461,9 +467,10 @@ section.about.about-just-game .section-box canvas {
 		text-align: left;
 		align-self: auto;
 	}
-	.header-left > p, .header-right p {
+	.header-left > p,
+	.header-right p {
 		margin-top: 2px;
-	}	
+	}
 	/* .header-left p {
 		display: none;
 	} */
@@ -477,7 +484,7 @@ section.about.about-just-game .section-box canvas {
 		flex-wrap: wrap;
 	}
 
-	.place-role .section-date ~ h4, 
+	.place-role .section-date ~ h4,
 	.place-role .section-date ~ a h4,
 	.place-role h5 {
 		text-align: right;
@@ -509,7 +516,7 @@ section.about.about-just-game .section-box canvas {
 	}
 
 	section.about-myself p {
-		text-indent: 1.5rem; 
+		text-indent: 1.5rem;
 		text-align: justify;
 		font-size: 1rem;
 		color: #141414;
@@ -540,18 +547,18 @@ section.about.about-just-game .section-box canvas {
 		max-width: 8.57rem;
 	}
 
-	section.about-work div.section-date, 
+	section.about-work div.section-date,
 	section.about-education div.section-date {
 		min-width: 5.7rem;
-    max-width: 5.7rem;
+		max-width: 5.7rem;
 	}
-	
+
 	section.section-skills.section-box {
 		padding: 0;
 		margin: 0.21rem 0;
 	}
 	section.section-skills span {
-		padding: 0.14rem 	0.5rem;
+		padding: 0.14rem 0.5rem;
 		font-size: 0.85rem;
 	}
 
@@ -565,6 +572,14 @@ section.about.about-just-game .section-box canvas {
 }
 
 @media print {
+	header {
+		position: initial;
+	}
+
+	main {
+		margin-top: 0rem !important;
+	}
+
 	footer {
 		display: none;
 	}
