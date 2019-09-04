@@ -54,6 +54,11 @@ footer h4 {
 	font-size: 0.95rem;
 }
 
+img.photo {
+	float: right;
+	border-radius: 35%;
+}
+
 h4.h4_aim {
 	margin-top: 0.8rem;
 	text-align: center;
@@ -395,6 +400,13 @@ section.about.about-just-game .section-box canvas {
 	border: 1px solid black;
 }
 
+@media (max-width: 990px) {
+	header,
+	main,
+	footer {
+		width: 80%;
+	}
+}
 @media (min-width: 2300px) {
 	html {
 		font-size: 25px;
@@ -424,6 +436,31 @@ section.about.about-just-game .section-box canvas {
 
 	div.place-role h5 {
 		margin-bottom: 3px;
+	}
+}
+@media (max-width: 600px) {
+	img.photo {
+		width: 10rem;
+		margin: 0 0 0.5rem 0.5rem;
+	}
+}
+
+@media (max-width: 500px) {
+	img.photo {
+		width: 8rem;
+		margin: 0 0 0.5rem 0.5rem;
+	}
+}
+
+@media (max-width: 360px) {
+	html {
+		font-size: 12px;
+	}
+
+	img.photo {
+		/* float: none; */
+		width: 8rem;
+		margin: 0 0 0.5rem 0.5rem;
 	}
 }
 
@@ -532,8 +569,8 @@ section.about.about-just-game .section-box canvas {
 }
 
 @media (max-width: 320px) {
-	* {
-		font-size: 0.785rem;
+	html {
+		font-size: 11px;
 	}
 
 	h1 {

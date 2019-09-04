@@ -1,271 +1,341 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117165717-3"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=UA-117165717-3"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
 
-		gtag('config', 'UA-117165717-3');
-	</script>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Ivan Kuplevich</title>
-	<link rel="stylesheet" href="style.css?v=2.2">
-	
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+			gtag('config', 'UA-117165717-3');
+		</script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Ivan Kuplevich</title>
+		<link rel="stylesheet" href="style.css?v=2.2" />
 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-</head>
-<body>
-	<header>
-		<div class="header-left">
-			<a target="new" href="https://www.linkedin.com/in/ivan-kuplevich/">
-				<h1>Куплевич Иван Александрович</h1>
-			</a>
-			<p><span id="bDate"></span>, 18.11.1997. Беларусь г. Минск</p>
-		</div>
-		<div class="header-right">
-			<a href="mailto:ivan.kuplevich.w@gmail.com" type="phone"><p>ivan.kuplevich.w@gmail.com</p></a>
-			<a href="tel:80295431322" type="phone"><p class="p_tel">+375 (29) 543-13-22</p></a>
-		</div>
-	</header>
-	<main>
-		<h2>FrontEnd Developer</h2>
-		<section class="about about-work">
-			<h3 id="expAmt">Опыт работы</h3>
-			<section class="section-box">
-				<div class="section-date">
-					<h4 id="retarcorpDate"></h4>
-					<p id="retarcorpAmt"></p>
-				</div>
-				<div class="place-role">
-					<a target="new" href="https://retarcorp.by/"><h4>RetarCorp LTD</h4></a>
-					<h4>Full Stack JS Developer</h4>
-					<p>VanilaJS, Node.js.</p>
-					<p>Разработка, оптимизация и поддержка веб-приложений.</p>
-				</div>
+		<link
+			href="https://fonts.googleapis.com/css?family=PT+Sans+Caption&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+			integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<header>
+			<div class="header-left">
+				<a target="new" href="https://www.linkedin.com/in/ivan-kuplevich/">
+					<h1>Куплевич Иван Александрович</h1>
+				</a>
+				<p><span id="bDate"></span>, 18.11.1997. Беларусь г. Минск</p>
+			</div>
+			<div class="header-right">
+				<a href="mailto:ivan.kuplevich.w@gmail.com" type="phone"
+					><p>ivan.kuplevich.w@gmail.com</p></a
+				>
+				<a href="tel:80295431322" type="phone"
+					><p class="p_tel">+375 (29) 543-13-22</p></a
+				>
+			</div>
+		</header>
+		<main>
+			<img class="photo" src="./photo.jpg" alt="Ivan Kuplevich Photo" />
+			<h2>FrontEnd Developer</h2>
+			<section class="about about-work">
+				<h3 id="expAmt">Опыт работы</h3>
+				<section class="section-box">
+					<div class="section-date">
+						<h4 id="retarcorpDate"></h4>
+						<p id="retarcorpAmt"></p>
+					</div>
+					<div class="place-role">
+						<a target="new" href="https://retarcorp.by/"
+							><h4>RetarCorp LTD</h4></a
+						>
+						<h4>Full Stack JS Developer</h4>
+						<p>VanilaJS, Node.js.</p>
+						<p>Разработка, оптимизация и поддержка веб-приложений.</p>
+					</div>
+				</section>
 			</section>
-		</section>
 
-		<section class="about about-education">
-			
-			<h3>Образование</h3>
-			<section class="section-box">
-				<div class="section-date">
-					<h4>Окончание - 2020</h4>
-					<p>среднее специальное, техник-программист</p>
-				</div>
-				<div class="place-role">
-					<h4>Колледж Бизнеса и Права</h4>
-					<h4>ПОИТ</h4>
-					<p>Программное обеспечение информационных технологий, разработчик программного обеспечения. Программное обеспечение обработки экономической и деловой информации.</p>
-				</div>
-			</section>
-			<section class="section-box">
+			<section class="about about-education">
+				<h3>Образование</h3>
+				<section class="section-box">
+					<div class="section-date">
+						<h4>Окончание - 2020</h4>
+						<p>среднее специальное, техник-программист</p>
+					</div>
+					<div class="place-role">
+						<h4>Колледж Бизнеса и Права</h4>
+						<h4>ПОИТ</h4>
+						<p>
+							Программное обеспечение информационных технологий, разработчик
+							программного обеспечения. Программное обеспечение обработки
+							экономической и деловой информации.
+						</p>
+					</div>
+				</section>
+				<section class="section-box">
 					<div class="section-date">
 						<h4>Март 2017 - сентябрь 2017</h4>
 						<!-- <p>курсы по JavaScript, 100 часовая стажировка</p> -->
 					</div>
 					<div class="place-role">
-						<a target="new" href="https://retarcorp.by/"><h4>RetarCorp LTD</h4></a>
+						<a target="new" href="https://retarcorp.by/"
+							><h4>RetarCorp LTD</h4></a
+						>
 						<h4>Курсы + Стажировка</h4>
-						<p>Курс front-end разработки на языке JavaScript. Стажировка в сфере front-end разработки.</p>
+						<p>
+							Курс front-end разработки на языке JavaScript. Стажировка в сфере
+							front-end разработки.
+						</p>
 					</div>
 				</section>
-			<section class="section-box">
-				<div class="section-date">
-					<h4>Сентябрь 2015 - июнь 2017</h4>
-					<p>неоконченное высшее</p>
-				</div>
-				<div class="place-role">
-					<h4>Белорусский Государственный Университет</h4>
-					<h4>ММФ</h4>
-					<p>Механико-математический факультет. Механика и математическое моделирование.</p>
-				</div>
 			</section>
 
-		</section>
-
-		<section class="about about-skills">
-			
-			<h3>Навыки</h3>
-			<section class="section-box section-skills">
-				<span data-skill="JavaScript">JavaScript</span>
-				<span data-skill="Golang">Golang</span>
-				<span data-skill="Angular">Angular</span>
-				<span data-skill="Node.js">Node.js</span>
-				<span data-skill="SQL">SQL</span>
-				<span data-skill="Git">Git</span>
-				<span data-skill="Webpack">Webpack</span>
-				<span data-skill="Vue">Vue</span>
-				<span data-skill="React">React</span>
-				<span data-skill="CSS">CSS</span>
-				<span data-skill="HTML">HTML</span>
-				<!-- <span data-skill="dApps">dApps</span> -->
-				<span data-skill="Express">Express</span>
-				<span data-skill="Redux">Redux</span>
-				<!-- <span data-skill="RIDE">RIDE</span> -->
-				<span data-skill="React Router">React Router</span>
-				<span data-skill="ESLint">ESLint</span>
-				<!-- <span data-skill="Web3">Web3</span> -->
-				<span data-skill="REST API">REST API</span>
-				<span data-skill="Prettier">Prettier</span>
-				<span data-skill="Puppeteer">Puppeteer</span>
-				<span data-skill="TypeScript">TypeScript</span>
-				<span data-skill="Heroku">Heroku</span>
-				<span data-skill="C#">C#</span>
-				<span data-skill="Ajax">Ajax</span>
-				<span data-skill="MongoDB">MongoDB</span>
-				<span data-skill="Electron">Electron</span>
-				<span data-skill="React Native">React Native</span>
+			<section class="about about-skills">
+				<h3>Навыки</h3>
+				<section class="section-box section-skills">
+					<span data-skill="JavaScript">JavaScript</span>
+					<span data-skill="Golang">Golang</span>
+					<span data-skill="Angular">Angular</span>
+					<span data-skill="Node.js">Node.js</span>
+					<span data-skill="Firebase">Firebase</span>
+					<span data-skill="SQL">SQL</span>
+					<span data-skill="Git">Git</span>
+					<span data-skill="Webpack">Webpack</span>
+					<span data-skill="Vue">Vue</span>
+					<span data-skill="Postman">Postman</span>
+					<span data-skill="React">React</span>
+					<span data-skill="Mocha">Mocha</span>
+					<span data-skill="Chai">Chai</span>
+					<span data-skill="CSS">CSS</span>
+					<span data-skill="HTML">HTML</span>
+					<!-- <span data-skill="dApps">dApps</span> -->
+					<span data-skill="Express">Express</span>
+					<span data-skill="Redux">Redux</span>
+					<!-- <span data-skill="RIDE">RIDE</span> -->
+					<span data-skill="React Router">React Router</span>
+					<span data-skill="ESLint">ESLint</span>
+					<!-- <span data-skill="Web3">Web3</span> -->
+					<span data-skill="REST API">REST API</span>
+					<span data-skill="Prettier">Prettier</span>
+					<span data-skill="Puppeteer">Puppeteer</span>
+					<span data-skill="TypeScript">TypeScript</span>
+					<span data-skill="Heroku">Heroku</span>
+					<span data-skill="C#">C#</span>
+					<span data-skill="Ajax">Ajax</span>
+					<span data-skill="MongoDB">MongoDB</span>
+					<span data-skill="Electron">Electron</span>
+					<span data-skill="React Native">React Native</span>
+				</section>
 			</section>
 
-		</section>
+			<section class="about about-pojects">
+				<h3>Проекты</h3>
 
-		<section class="about about-pojects">
-			
-			<h3>Проекты</h3>
+				<!-- <section data-project="TT" id="TT" class="section-box section-mob-swap">
+					<div class="section-date">
+						<h4>Лето 2019 - Осень 2019</h4>
+						<p>разработка и поддержка третьего коммерческого проекта</p>
+					</div>
+					<div class="place-role">
+						<a target="new" href="http://tutoritech.com/"
+							><h4>TutoriTech<span> | retarcorp</span></h4></a
+						>
+						<h5>Back-end разработка</h5>
+						<p>
+							Проект представляет собой платформу для дистанционного
+							IT-образования.
+						</p>
+						<p>
+							Работал с Firebase Auth, Functions и Firestore; настраивал и
+							проектировал базу данных, рассылку почты; писал тесты для Firebase
+							Functions.
+						</p>
+					</div>
+				</section> -->
 
-			<section data-project="BWS" id="BWS" class="section-box section-mob-swap">
-				<div class="section-date">
-					<h4>Осень 2017 - лето 2019</h4>
-					<p>разработка и поддержка моего первого коммерческого проекта</p>
-				</div>
-				<div class="place-role">
-					<a target="new" href="https://retarcorp.by/portfolio/BWSChart/"><h4>BWSChart<span> | retarcorp</span></h4></a>
-					<h5>Front-end разработка</h5>
-					<p>Проект представляет собой многофункциональную платформу для отображения и работы с графиками валютных рынков.</p>
-					<p>Разработал:</p>
-					<p> - UI интерфейс для работы с графиком;</p>
-					<p> - графической движок платформы.</p>
-				</div>
+				<section
+					data-project="BWS"
+					id="BWS"
+					class="section-box section-mob-swap"
+				>
+					<div class="section-date">
+						<h4>Осень 2017 - лето 2019</h4>
+						<p>разработка и поддержка моего первого коммерческого проекта</p>
+					</div>
+					<div class="place-role">
+						<a target="new" href="https://retarcorp.by/portfolio/BWSChart/"
+							><h4>BWSChart<span> | retarcorp</span></h4></a
+						>
+						<h5>Front-end разработка</h5>
+						<p>
+							Проект представляет собой многофункциональную платформу для
+							отображения и работы с графиками валютных рынков.
+						</p>
+						<p>Разработал:</p>
+						<p>- UI интерфейс для работы с графиком;</p>
+						<p>- графической движок платформы.</p>
+					</div>
+				</section>
+
+				<section
+					data-project="OS"
+					id="OSST"
+					class="section-box section-mob-swap"
+				>
+					<div class="section-date">
+						<h4>Весна 2019</h4>
+						<p>фриланс разработка сайта-превью</p>
+					</div>
+					<div class="place-role">
+						<a target="new" href="https://stanley.com.by/"
+							><h4>Stanley.com.by <span>| up18</span></h4></a
+						>
+						<h5>Front-end разработка</h5>
+						<p>Разработан дизайн, сверстана страница и привязаны метрики.</p>
+						<p>
+							Было акцентированно вниманием на дизайн и верстку, которая
+							содержит в себе качественную семантику, доступность и
+							адаптивность.
+						</p>
+					</div>
+				</section>
+
+				<section
+					data-project="OSG"
+					id="OSG"
+					class="section-box section-mob-swap"
+				>
+					<div class="section-date">
+						<h4>Весна 2019</h4>
+						<p>фриланс разработка консольных приложений</p>
+					</div>
+					<div class="place-role">
+						<a target="new" href="https://github.com/mmfKupl/priceChecker"
+							><h4>PriceChecker & Scrabers <span>| up18</span></h4></a
+						>
+						<h5></h5>
+						<p>
+							- разработано консольное приложение для проверки цен на товары по
+							введенным артикулам с формированием xml документа.
+						</p>
+						<p>
+							- разработан парсер сайтов-конкурентов с формированием xlsx
+							документа с информацией и сохранением картинок.
+						</p>
+					</div>
+				</section>
+
+				<section
+					data-project="TB"
+					id="TRB"
+					class="section-box section-mob-swap"
+				>
+					<div class="section-date">
+						<h4>Лето 2018 - осень 2018</h4>
+						<p>разработка второго коммерческого проекта</p>
+					</div>
+					<div class="place-role">
+						<h4>TradeBots <span>| retarcorp</span></h4>
+						<h5>Front-end & Back-end разработка</h5>
+						<p>
+							TradeBots - веб-платформа, предоставляющая ботов для трейдинга на
+							криптобирже
+							<a target="new" href="https://www.binance.com/">Binance</a>.
+						</p>
+						<p>
+							В данном проекте мной были разработаны - API сервер, боты и
+							веб-интерфейс.
+						</p>
+						<p>
+							Основная работа ботов заключалась в взаимодействии с данными о
+							ордера на бирже через обращение к Binance API, представляющие
+							собой xhr запросы, возвращаюшие json объект. Также пришлось
+							парсить сигналы
+							<a target="new" href="https://www.tradingview.com/"
+								>tradingview</a
+							>
+							и привязывать оплату криптовалютой через
+							<a target="new" href="https://bitaps.com/">bitaps</a>.
+						</p>
+					</div>
+				</section>
+
+				<section
+					data-project="OS"
+					id="WCR"
+					class="section-box section-mob-swap"
+				>
+					<div class="section-date">
+						<h4>Зима 2017</h4>
+						<p>фриланс разработка сайта-превью</p>
+					</div>
+					<div class="place-role">
+						<a target="new" href="https://wolfcraft.by/"
+							><h4>Wolfcraft.by<span> | up18</span></h4></a
+						>
+						<h5>Front-end разработка</h5>
+						<p>Разработан дизайн, сверстана страница и привязаны метрики.</p>
+					</div>
+				</section>
 			</section>
 
-			<section data-project="PR" id="PR" class="section-box section-mob-swap">
-				<div class="section-date">
-					<h4>Весна 2019</h4>
-					<p>разработка собственного проекта для прохождения практики</p>
-					<p class="in_freeze">заморожен</p>
-				</div>
-				<div class="place-role">
-					<a target="new" href="https://github.com/RomanChirkov/PokerRoom"><h4>PokerRoom</h4></a>
-					<h5>Front-end & Back-end разработка</h5>
-					<p>Изначально планировалось сделать мобильное приложение используя React Native, но, после ознакомления и нескольких написанных страниц, было решено отказаться от нет. В результате было выбрано перейти на React и верстку страниц под мобильный размер, с последующим портированием приложения под мобильное приложение.</p>
-					<p>Разработана система регистрации и авторизации пользователя, с подтверждением email.</p>
-				</div>
+			<section class="about about-myself">
+				<h3>Обо мне</h3>
+				<section class="section-box">
+					<p>
+						Имею опыт работы более двух над коммерчискими проектами,
+						разрабатываемыми с нуля, в роли Full Stack JS, опыт общения напрямую
+						с заказчиком и работы в команде.
+					</p>
+					<p>
+						В данный момент ативно изучаю Angular, поднимаю уровень английского
+						у репетитора.
+					</p>
+				</section>
 			</section>
-
-			<section data-project="OS" id="OSST" class="section-box section-mob-swap">
-				<div class="section-date">
-					<h4>Весна 2019</h4>
-					<p>фриланс разработка сайта-превью</p>
-				</div>
-				<div class="place-role">
-					<a target="new" href="https://stanley.com.by/"><h4>Stanley.com.by <span>| up18</span></h4></a>
-					<h5>Front-end разработка</h5>
-					<p>Разработан дизайн, сверстана страница и привязаны метрики.</p>
-					<p>Было акцентированно вниманием на дизайн и верстку, которая содержит в себе качественную семантику, доступность и адаптивность.</p>
-				</div>
-			</section>
-			
-			<section data-project="OSG" id="OSG" class="section-box section-mob-swap">
-				<div class="section-date">
-					<h4>Весна 2019</h4>
-					<p>фриланс разработка консольных приложений</p>
-				</div>
-				<div class="place-role">
-					<a target="new" href="https://github.com/mmfKupl/priceChecker"><h4>PriceChecker & Scrabers  <span>| up18</span></h4></a>
-					<h5></h5>
-					<p> - разработано консольное приложение для проверки цен на товары по введенным артикулам с формированием xml документа.</p>
-					<p> - разработан парсер сайтов-конкурентов с формированием xlsx документа с информацией и сохранением картинок.</p>
-				</div>
-			</section>
-
-			<section data-project="TB" id="TRB" class="section-box section-mob-swap">
-				<div class="section-date">
-					<h4>Лето 2018 - осень 2018</h4>
-					<p>разработка второго коммерческого проекта</p>
-				</div>
-				<div class="place-role">
-					<h4>TradeBots <span>| retarcorp</span></h4>
-					<h5>Front-end & Back-end разработка</h5>
-					<p>TradeBots - веб-платформа, предоставляющая ботов для трейдинга на криптобирже <a target="new" href="https://www.binance.com/">Binance</a>.</p>
-					<p>В данном проекте мной были разработаны - API сервер, боты и веб-интерфейс.</p>
-					<p>Основная работа ботов заключалась в взаимодействии с данными о ордера на бирже через обращение к Binance API, представляющие собой xhr запросы, возвращаюшие json объект. Также пришлось парсить сигналы <a target="new" href="https://www.tradingview.com/">tradingview</a> и привязывать оплату криптовалютой через <a target="new" href="https://bitaps.com/">bitaps</a>.</p>
-				</div>
-			</section>
-
-			<section data-project="OS" id="WCR" class="section-box section-mob-swap">
-				<div class="section-date">
-					<h4>Зима 2017</h4>
-					<p>фриланс разработка сайта-превью</p>
-				</div>
-				<div class="place-role">
-					<a target="new" href="https://wolfcraft.by/"><h4>Wolfcraft.by<span> | up18</span></h4></a>
-					<h5>Front-end разработка</h5>
-					<p>Разработан дизайн, сверстана страница и привязаны метрики.</p>
-				</div>
-			</section>
-
-		</section>
-
-		<section class="about about-myself">
-
-			<h3>Пару слов обо мне</h3>
-			<section class="section-box">
-				<p>Привет! Меня зовут Иван. Я - активно развивающийся <b>Front End</b> разработчик. Уже больше 3х лет имею сильную любовь к программированию, постоянно развиваюсь, изучаю новые инструменты и совершенствуюсь в старых, стараюсь развивать себя как FullStack. В основном пишу на чистом JavaScript, имею опыт в работе с Nodejs и Golang.</p>
-				<p>Мой уровень <b>английского - pre-intermediate+</b>. Понимая, что он необходим как воздух - с весны 2019 года активно развиваю его.</p>
-				<p>Мое знакомство с программированием началось с C++, после некоторого времени я познакомился с JavaScript на курсах front-end разработки и понял, что программирование - это то, чем  я хочу заниматься по жизни!</p>
-				<p>Курсы дались легко, после чего успешно попал на стажировку. На стажировке я смог в короткие сроки освоиться с клиентской разработкой веб-приложений и начать уверенно разрабатывать их. После, меня взяли на роль джуна, разрабатывать с нуля проект <a href="#BWS">"BWSChart"</a>. По ходу разработки приходилось иметь дело с html5 canvas, событиями и большим количеством данных. Часто приходилось писать алгоритмы, которые позволяли оптимизировать затраты на отрисовку элементов и их хранение. Проект требовал разработки ООП кода и использование ES5 - эти условия развили глубокие знания языка JavaScript, в частности понимание прототипной модели языка.</p>
-				<!-- <p>Помимо работы над проектом, я изучал новые инструменты, паттерны, которые смог внедрять в разработку. Также я понимал - чтобы стать успешным разработчиком веб-приложений, мне необходим хороший опыт с css и html. Для их развития я практиковался на собственных тестовых проектах и фрилансе; первый успешный опыт верстки - сайт <a href="#WCR">wolfcraft.by</a>.</p> -->
-				<!-- <p>После окончания основных работ по BWSChart поступил новый проект - <a href="#TRB">TradeBots</a>. Для этого проекта мне пришлось знакомиться с новыми для меня технологиями в которкие сроки. Стек технологий - expressjs/vue. База данных - mongodb. Back-end часть приложения в основном состояла из асинхронного кода - это стало причиной подробного изучения промисов и async/await. Выбор фреймворка Vue.js для fron-end позволил глубоко изучить все современные возможности ECMAScript. Разработка этого проекта познакомила меня с back-end разработкой, научила находить нестандартные решения и больше понимать в разработке приложений. Реализуя этот проект, я почувствовал, что перешел на новый уровень программирования.</p> -->
-				<!-- <p>После завершения ботов начать развивать себя в сфере back-end и узнал про язык Golang. После прохождения GoTour и ознакомления с языком, взялся за прочтение книги "Язык программирования Go". По ходу чтения книги, старался писать различные программы на Go, в особенности мне помогли лабы в колледже по защите компьютерной информации - написание алгоритмов шифрования и подписи (таких как RSA, Elgamal, Diffie-Hellman) развили глубокие навыки и понимание языка. Также, для прохождения практики, было решено разрабатывать приложение используя стек React/Go - <a href="#PR">PokerRoom</a>. Моя основная цель в разработке этого приложения - набраться практического опыта в работе с Golang, React и реляционной базой данных - MySql. На текущий момент реализации я получих хороший опыт в создании RESTful сервера, общение с базой данных и обработку ошибок в Golang и проектирование архитектуры приложений, написанных на React с использованием Redux и React Router. Также я получил уверенность в работе с этими инструментами.</p> -->
-				<!-- <p>Во время моего знакомства с Go, поступило предложение разработать несколько парсеров сайтов и <a href="#OSG">приложение</a>, которое выдавало бы текущие цены по конкретному артикулу товара в указанных онлайн-магазинах. Быстрое решение, которое я принял - разработать их используя JS и Puppeteer. В результате получились ресурсозатратное и медленное приложение, которое никого не радовало меня. После недолгих размышления я решил переписать приложения, используя Golang - это был верный шаг. В результате я получил несколько консольных приложений, которые работают практически на любой системе и работают в разы быстрее, чем аналогичная версия на Puppeteer. И, также, я получил отличный опыт в разработке асинхронных приложений с использованием горутин и каналов.</p> -->
-				<!-- <p>Язык Go произвел на меня отличное впечатление. Благодаря моей увлеченности им, я начал ходить на митапы. Первый - GoWay. На митапах я набираюсь стимула для изучения новых технологий и инструментов. На данный момент изучаю Kafka и TypeScript.  -->
-					<!-- Также начал увлекаться темой блокчейна - в результате попал на курсы Waves по созданию децентрализованных приложений. -->
-				<!-- </p> -->
-				<!-- <p>Однажды, бороздя просторы youtube'а, я наткнулся на канал <a target="new" href="https://www.youtube.com/channel/UCaTfYudJUVA8cV_But8KZVQ">Вадима Макеева</a> - на своем канале он выкладывает видео про <b>качественную</b> верстку. Просмотрел все видео, я очень вдохновился его посылом - <b>создавать интерфейсы для людей</b>. Как раз, в этот момент, мне нужно было разработать сайт-превью по бренду <a href="#OSST">Stanley</a>. Полный мотивации, я постарался сверстать максимально удобный, адаптивный и доступный интерфейс, и мне кажется - это получилось.</p> -->
-				<!-- <h4 class="h4_aim">Моя главная цель - создавать полезные и доступные приложения!</h4> -->
-			</section>
-
-		</section>
-
-		<!-- <section class="about about-just-game">
-			<section class="section-box"><canvas height="200px" id="canvas"></canvas></section>
-		</section> -->
-
-	</main>
-	<footer>
-		<a target="new" href="https://www.linkedin.com/in/ivan-kuplevich/">
-			<span class="i"><i class="fab fa-linkedin"></i></span><h4>LinkedIn</h4>
-		</a>
-		<a target="new" href="https://github.com/mmfKupl">
-			<span class="i"><i class="fab fa-github"></i></span><h4>GitHub</h4>
-		</a>
-		<a target="new" href="https://t.me/Kupll">
-			<span class="i"><i class="fab fa-telegram"></i></span><h4>Telegram</h4>
-		</a>
-		<!-- <span class="right">|</span> -->
-		<!-- <a id="switchColor" class="right1">
+		</main>
+		<footer>
+			<a target="new" href="https://www.linkedin.com/in/ivan-kuplevich/">
+				<span class="i"><i class="fab fa-linkedin"></i></span>
+				<h4>LinkedIn</h4>
+			</a>
+			<a target="new" href="https://github.com/mmfKupl">
+				<span class="i"><i class="fab fa-github"></i></span>
+				<h4>GitHub</h4>
+			</a>
+			<a target="new" href="https://t.me/Kupll">
+				<span class="i"><i class="fab fa-telegram"></i></span>
+				<h4>Telegram</h4>
+			</a>
+			<!-- <span class="right">|</span> -->
+			<!-- <a id="switchColor" class="right1">
 			<span class="i">
 				<i class="fas fa-adjust"></i>
 			</span><h4 aria-label="switch color mode"></h4>
 		</a> -->
-		<!-- <a id="switchLanguage" href="indexen.html" class="right1">
+			<!-- <a id="switchLanguage" href="indexen.html" class="right1">
 			<span class="i">
 				<i class="fas fa-globe"></i>
 			</span><h4 aria-label="switch language"></h4>
 		</a> -->
-	</footer>
-</body>
+		</footer>
+	</body>
 
-
-
-
-<script type="text/javascript" src="script.js?v=1.7"></script>
-<!-- <script type="text/javascript" src="game.js?v=0.0"></script> -->
+	<script type="text/javascript" src="script.js?v=1.7"></script>
 </html>
