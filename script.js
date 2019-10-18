@@ -89,15 +89,6 @@ var PR_SKILLS = [
 	'Prettier',
 	'ESLint'
 ];
-var W3W_SKILLS = [
-	'Heroku',
-	'JavaScript',
-	'Git',
-	'Web3',
-	'dApps',
-	'RIDE',
-	'React'
-];
 
 window.addEventListener('load', () => {
 	var isClick = false;
