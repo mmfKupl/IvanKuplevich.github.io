@@ -90,6 +90,36 @@ var PR_SKILLS = [
 	'ESLint'
 ];
 
+var DF_SKILLS = [
+	'Angular',
+	'TypeScript',
+	'Heroku',
+	'Ajax',
+	'Angular Material',
+	'Firebase',
+	'JavaScript',
+	'Node.js',
+	'CSS',
+	'HTML',
+	'NoSQL',
+	'Git'
+];
+
+var ND_SKILLS = [
+	'Angular',
+	'Angular Universal',
+	'TypeScript',
+	'JavaScript',
+	'HTML',
+	'SCSS',
+	'CSS',
+	'Node.js',
+	'Express',
+	'SQL',
+	'Heroku',
+	'Git'
+];
+
 window.addEventListener('load', () => {
 	var isClick = false;
 
@@ -260,6 +290,10 @@ function getCurrentData(attr) {
 			return OSG_SKILLS;
 		case 'TT':
 			return TT_SKILLS;
+		case 'DF':
+			return DF_SKILLS;
+		case 'ND':
+			return ND_SKILLS;
 	}
 	return [];
 }
