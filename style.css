@@ -609,6 +609,10 @@ section.about.about-just-game .section-box canvas {
 }
 
 @media print {
+	.not-print {
+		display: none;
+	}
+
 	header {
 		position: initial;
 	}
