@@ -202,7 +202,7 @@ window.addEventListener('load', () => {
     ' ' +
     getNumWithPrefix(worksGen.next().value, MONTHES);
 
-  var retarcorpsGen = getWorkExperience(START_DATE_IN_RETARCORP);
+  var retarcorpsGen = getWorkExperience(START_DATE_IN_RETARCORP, END_DATE_IN_RETARCORP);
   retarcorpDate.innerText = getWorkPeriode(
     START_DATE_IN_RETARCORP,
     END_DATE_IN_RETARCORP
@@ -253,8 +253,8 @@ function getNumWithPrefix(number, [_1, _2, _3]) {
   return strNumber + _3;
 }
 
-function* getWorkExperience(from = '') {
-  var now = new Date();
+function* getWorkExperience(from = '', to = '') {
+  var now = to ? new Date(to) : new Date();
   var start = new Date(from);
 
   var amountYears = now.getFullYear() - start.getFullYear();
