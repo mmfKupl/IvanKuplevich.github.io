@@ -1,384 +1,417 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=UA-117165717-3"
-		></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-117165717-3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-			gtag('config', 'UA-117165717-3');
-		</script>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Ivan Kuplevich</title>
-		<link rel="stylesheet" href="style.css?v=2.2" />
+      function gtag() {
+        dataLayer.push(arguments);
+      }
 
-		<link
-			href="https://fonts.googleapis.com/css?family=PT+Sans+Caption&display=swap"
-			rel="stylesheet"
-		/>
+      gtag('js', new Date());
 
-		<link
-			rel="stylesheet"
-			href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-			integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-			crossorigin="anonymous"
-		/>
-	</head>
-	<body>
-		<header>
-			<div class="header-left">
-				<a target="_blank" href="https://www.linkedin.com/in/ivan-kuplevich/">
-					<h1>Куплевич Иван Александрович</h1>
-				</a>
-				<p><span id="bDate"></span>, 18.11.1997. Беларусь г. Минск</p>
-			</div>
-			<div class="header-right">
-				<a href="mailto:ivan.kuplevich.w@gmail.com" type="phone"
-					><p>ivan.kuplevich.w@gmail.com</p></a
-				>
-				<a href="tel:80295431322" type="phone"
-					><p class="p_tel">+375 (29) 543-13-22</p></a
-				>
-			</div>
-		</header>
-		<main>
-			<img class="photo" src="./photo.jpg" alt="Ivan Kuplevich Photo" />
-			<h2>FrontEnd Developer</h2>
-			<section class="about about-work">
-				<h3 id="expAmt">Опыт работы</h3>
-				<section class="section-box">
-					<div class="section-date">
-						<h4 id="retarcorpDate"></h4>
-						<p id="retarcorpAmt"></p>
-					</div>
-					<div class="place-role">
-						<a target="_blank" href="https://retarcorp.by/"
-							><h4>RetarCorp LTD</h4></a
-						>
-						<h4>Full Stack JS Developer</h4>
-						<p>VanilaJS, Node.js.</p>
-						<p>Разработка, оптимизация и поддержка веб-приложений.</p>
-					</div>
-				</section>
-			</section>
+      gtag('config', 'UA-117165717-3');
+    </script>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Ivan Kuplevich</title>
+    <link rel="stylesheet" href="style.css?v=2.2"/>
 
-			<section class="about about-education">
-				<h3>Образование</h3>
-				<section class="section-box">
-					<div class="section-date">
-						<h4>2017 - 2020</h4>
-						<p>среднее специальное, техник-программист</p>
-					</div>
-					<div class="place-role">
-						<h4>Колледж Бизнеса и Права</h4>
-						<h4>ПОИТ</h4>
-						<p>
-							Программное обеспечение информационных технологий, разработчик
-							программного обеспечения. Программное обеспечение обработки
-							экономической и деловой информации.
-						</p>
-					</div>
-				</section>
-				<section class="section-box">
-					<div class="section-date">
-						<h4>Март 2017 - сентябрь 2017</h4>
-						<!-- <p>курсы по JavaScript, 100 часовая стажировка</p> -->
-					</div>
-					<div class="place-role">
-						<a target="_blank" href="https://retarcorp.by/"
-							><h4>RetarCorp LTD</h4></a
-						>
-						<h4>Курсы + Стажировка</h4>
-						<p>
-							Курс front-end разработки на языке JavaScript. Стажировка в сфере
-							front-end разработки.
-						</p>
-					</div>
-				</section>
-			</section>
+    <link
+            href="https://fonts.googleapis.com/css?family=PT+Sans+Caption&display=swap"
+            rel="stylesheet"
+    />
 
-			<section class="about about-skills">
-				<h3>Навыки</h3>
-				<section class="section-box section-skills">
-					<span data-skill="JavaScript">JavaScript</span>
-					<span data-skill="Angular">Angular</span>
-					<span data-skill="Golang">Golang</span>
-					<span data-skill="Node.js">Node.js</span>
-					<span data-skill="Firebase">Firebase</span>
-					<span data-skill="Angular Universal">Angular Universal</span>
-					<span data-skill="Angular Material">Angular Material</span>
-					<span data-skill="SQL">SQL</span>
-					<span data-skill="NoSQL">NoSQL</span>
-					<span data-skill="Git">Git</span>
-					<span data-skill="Webpack">Webpack</span>
-					<span data-skill="Vue">Vue</span>
-					<span data-skill="Postman">Postman</span>
-					<span data-skill="React">React</span>
-					<span data-skill="Mocha">Mocha</span>
-					<span data-skill="Chai">Chai</span>
-					<span data-skill="CSS">CSS</span>
-					<span data-skill="HTML">HTML</span>
-					<span data-skill="SCSS">SCSS</span>
-					<span data-skill="Express">Express</span>
-					<span data-skill="Redux">Redux</span>
-					<span data-skill="React Router">React Router</span>
-					<span data-skill="ESLint">ESLint</span>
-					<span data-skill="REST API">REST API</span>
-					<span data-skill="Prettier">Prettier</span>
-					<span data-skill="Puppeteer">Puppeteer</span>
-					<span data-skill="TypeScript">TypeScript</span>
-					<span data-skill="Heroku">Heroku</span>
-					<span data-skill="C#">C#</span>
-					<span data-skill="Ajax">Ajax</span>
-					<span data-skill="MongoDB">MongoDB</span>
-					<span data-skill="Electron">Electron</span>
-					<span data-skill="React Native">React Native</span>
-				</section>
-			</section>
+    <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+            crossorigin="anonymous"
+    />
+</head>
+<body>
+<header>
+    <div class="header-left">
+        <a target="_blank" href="https://www.linkedin.com/in/ivan-kuplevich/">
+            <h1>Куплевич Иван Александрович</h1>
+        </a>
+        <p><span id="bDate"></span>, 18.11.1997. Беларусь г. Минск</p>
+    </div>
+    <div class="header-right">
+        <a href="mailto:ivan.kuplevich.w@gmail.com" type="phone"
+        ><p>ivan.kuplevich.w@gmail.com</p></a
+        >
+        <a href="tel:80295431322" type="phone"
+        ><p class="p_tel">+375 (29) 543-13-22</p></a
+        >
+    </div>
+</header>
+<main>
+    <img class="photo" src="./photo.jpg" alt="Ivan Kuplevich Photo"/>
+    <h2>FrontEnd Developer</h2>
+    <section class="about about-work">
+        <h3 id="expAmt">Опыт работы</h3>
+        <section class="section-box">
+            <div class="section-date">
+				<h4 id="akveoDate"></h4>
+				<p id="akveoAmt"></p>
+            </div>
+            <div class="place-role">
+                <a target="_blank" href="https://retarcorp.by/"
+                ><h4>Akveo LTD</h4></a
+                >
+                <h4>Front End Angular Developer</h4>
+                <p>Angular, Java</p>
+                <p>Разработка, оптимизация и поддержка веб-приложений.</p>
+            </div>
+        </section>
 
-			<section class="about about-pojects">
-				<h3>Проекты</h3>
+        <section class="section-box">
+            <div class="section-date">
+				<h4 id="retarcorpDate"></h4>
+				<p id="retarcorpAmt"></p>
+            </div>
+            <div class="place-role">
+                <a target="_blank" href="https://retarcorp.by/"
+                ><h4>RetarCorp LTD</h4></a
+                >
+                <h4>Full Stack JS Developer</h4>
+                <p>VanilaJS, Node.js.</p>
+                <p>Разработка, оптимизация и поддержка веб-приложений.</p>
+            </div>
+        </section>
+    </section>
 
-				<!-- <section data-project="TT" id="TT" class="section-box section-mob-swap">
-					<div class="section-date">
-						<h4>Лето 2019 - Осень 2019</h4>
-						<p>разработка и поддержка третьего коммерческого проекта</p>
-					</div>
-					<div class="place-role">
-						<a target="_blank" href="http://tutoritech.com/"
-							><h4>TutoriTech<span> | retarcorp</span></h4></a
-						>
-						<h5>Back-end разработка</h5>
-						<p>
-							Проект представляет собой платформу для дистанционного
-							IT-образования.
-						</p>
-						<p>
-							Работал с Firebase Auth, Functions и Firestore; настраивал и
-							проектировал базу данных, рассылку почты; писал тесты для Firebase
-							Functions.
-						</p>
-					</div>
-				</section> -->
+    <section class="about about-education">
+        <h3>Образование</h3>
+        <section class="section-box">
+            <div class="section-date">
+                <h4>2017 - 2020</h4>
+                <p>среднее специальное, техник-программист</p>
+            </div>
+            <div class="place-role">
+                <h4>Колледж Бизнеса и Права</h4>
+                <h4>ПОИТ</h4>
+                <p>
+                    Программное обеспечение информационных технологий, разработчик
+                    программного обеспечения. Программное обеспечение обработки
+                    экономической и деловой информации.
+                </p>
+            </div>
+        </section>
+        <section class="section-box">
+            <div class="section-date">
+                <h4>Март 2017 - сентябрь 2017</h4>
+                <!-- <p>курсы по JavaScript, 100 часовая стажировка</p> -->
+            </div>
+            <div class="place-role">
+                <a target="_blank" href="https://retarcorp.by/"
+                ><h4>RetarCorp LTD</h4></a
+                >
+                <h4>Курсы + Стажировка</h4>
+                <p>
+                    Курс front-end разработки на языке JavaScript. Стажировка в сфере
+                    front-end разработки.
+                </p>
+            </div>
+        </section>
+    </section>
 
-				<section data-project="ND" id="ND" class="section-box section-mob-swap">
-					<div class="section-date">
-						<h4>Октябрь - Ноябрь 2019</h4>
-						<p>фриланс разработка проекта</p>
-					</div>
-					<div class="place-role">
-						<a target="_blank" href="http://a0350381.xsph.ru/"
-							><h4>Сайт-каталог<span> | nordex97</span></h4></a
-						>
-						<h5>
-							Full-stack разработка |
-							<a
-								class="not-print"
-								target="_blank"
-								href="https://github.com/mmfKupl/nordex97"
-							>
-								<span class="i"><i class="fab fa-github"></i></span>git
-							</a>
-						</h5>
-						<p>Разработал:</p>
-						<p>- дизайн и верстка;</p>
-						<p>- адаптивность;</p>
-						<p>- проектирование и заполнение бд;</p>
-						<p>- настройка ssr и мета-тегов;</p>
-						<p>- деплой на хостинг.</p>
-					</div>
-				</section>
+    <section class="about about-skills">
+        <h3>Навыки</h3>
+        <section class="section-box section-skills">
+            <span data-skill="JavaScript">JavaScript</span>
+            <span data-skill="Angular">Angular</span>
+            <span data-skill="Golang">Golang</span>
+            <span data-skill="Node.js">Node.js</span>
+            <span data-skill="Firebase">Firebase</span>
+            <span data-skill="Angular Universal">Angular Universal</span>
+            <span data-skill="Angular Material">Angular Material</span>
+            <span data-skill="RxJs">RxJs</span>
+            <span data-skill="NgRx">NgRx</span>
+            <span data-skill="SQL">SQL</span>
+            <span data-skill="NoSQL">NoSQL</span>
+            <span data-skill="Git">Git</span>
+            <span data-skill="Webpack">Webpack</span>
+            <span data-skill="Vue">Vue</span>
+            <span data-skill="Postman">Postman</span>
+            <span data-skill="Java Spring">Java Spring</span>
+            <span data-skill="React">React</span>
+            <span data-skill="Mocha">Mocha</span>
+            <span data-skill="Chai">Chai</span>
+            <span data-skill="CSS">CSS</span>
+            <span data-skill="HTML">HTML</span>
+            <span data-skill="SCSS">SCSS</span>
+            <span data-skill="Express">Express</span>
+            <span data-skill="Redux">Redux</span>
+            <span data-skill="React Router">React Router</span>
+            <span data-skill="ESLint">ESLint</span>
+            <span data-skill="REST API">REST API</span>
+            <span data-skill="Prettier">Prettier</span>
+            <span data-skill="Puppeteer">Puppeteer</span>
+            <span data-skill="TypeScript">TypeScript</span>
+            <span data-skill="Heroku">Heroku</span>
+            <span data-skill="C#">C#</span>
+            <span data-skill="Ajax">Ajax</span>
+            <span data-skill="MongoDB">MongoDB</span>
+            <span data-skill="Electron">Electron</span>
+            <span data-skill="React Native">React Native</span>
+        </section>
+    </section>
 
-				<section data-project="DF" id="DF" class="section-box section-mob-swap">
-					<div class="section-date">
-						<h4>Октябрь 2019</h4>
-						<p>фриланс разработка проекта</p>
-					</div>
-					<div class="place-role">
-						<a target="_blank" href="https://dewalt.com.by/"
-							><h4>DeWalt.com.by<span> | up18</span></h4></a
-						>
-						<h5>Full-stack разработка |
-							<a
-								class="not-print"
-								target="_blank"
-								href="https://github.com/mmfKupl/dewalt-form"
-							>
-								<span class="i"><i class="fab fa-github"></i></span>git
-							</a></h5>
-						<p>
-							Проект представляет собой сайт, через который можно оформить
-							заявку на гарантийный ремонт инструмента.
-						</p>
-						<p>Разработал:</p>
-						<p>- дизайн и верстка;</p>
-						<p>- интерфейс для взаимондействия с формами;</p>
-						<p>
-							- обработку форм с последующей отправкой email и генерацией xml
-							документа.
-						</p>
-					</div>
-				</section>
+    <section class="about about-pojects">
+        <h3>Проекты</h3>
 
-				<section
-					data-project="BWS"
-					id="BWS"
-					class="section-box section-mob-swap"
-				>
-					<div class="section-date">
-						<h4>Осень 2017 - лето 2019</h4>
-						<p>разработка и поддержка коммерческого проекта</p>
-					</div>
-					<div class="place-role">
-						<a target="_blank" href="https://retarcorp.by/portfolio/BWSChart/"
-							><h4>BWSChart<span> | retarcorp</span></h4></a
-						>
-						<h5>Front-end разработка</h5>
-						<p>
-							Проект представляет собой многофункциональную платформу для
-							отображения и работы с графиками валютных рынков.
-						</p>
-						<p>Разработал:</p>
-						<p>- UI интерфейс для работы с графиком;</p>
-						<p>- графической движок платформы.</p>
-					</div>
-				</section>
+        <section data-project="UIB" id="UIB" class="section-box section-mob-swap">
+            <div class="section-date">
+                <h4>Зима 2019 - по настоящее время</h4>
+                <p>разработка и поддержка коммерческого проекта</p>
+            </div>
+            <div class="place-role">
+                <a target="_blank" href="https://akveo.com/">
+                    <h4>UIBakery<span> | akveo</span></h4>
+                </a>
+                <h5>Front-end и Back-end разработка</h5>
+            </div>
+        </section>
 
-				<section
-					data-project="OS"
-					id="OSST"
-					class="section-box section-mob-swap"
-				>
-					<div class="section-date">
-						<h4>Весна 2019</h4>
-						<p>фриланс разработка сайта-превью</p>
-					</div>
-					<div class="place-role">
-						<a target="_blank" href="https://stanley.com.by/"
-							><h4>Stanley.com.by <span>| up18</span></h4></a
-						>
-						<h5>Front-end разработка</h5>
-						<p>Разработан дизайн, сверстана страница и привязаны метрики.</p>
-						<p>
-							Было акцентированно внимание на дизайн и верстку, которая содержит
-							в себе качественную семантику, доступность и адаптивность.
-						</p>
-					</div>
-				</section>
+        <section data-project="TT" id="TT" class="section-box section-mob-swap">
+            <div class="section-date">
+                <h4>Лето 2019 - Зима 2019</h4>
+                <p>разработка и поддержка коммерческого проекта</p>
+            </div>
+            <div class="place-role">
+                <a target="_blank" href="http://tutoritech.com/">
+                    <h4>TutoriTech<span> | retarcorp</span></h4>
+                </a>
+                <h5>Back-end разработка</h5>
+                <p>
+                    Проект представляет собой платформу для дистанционного
+                    IT-образования.
+                </p>
+                <p>
+                    Работал с Firebase Auth, Functions и Firestore; настраивал и
+                    проектировал базу данных, рассылку почты; писал тесты для Firebase
+                    Functions.
+                </p>
+            </div>
+        </section>
 
-				<section
-					data-project="OSG"
-					id="OSG"
-					class="section-box section-mob-swap"
-				>
-					<div class="section-date">
-						<h4>Весна 2019</h4>
-						<p>фриланс разработка консольных приложений</p>
-					</div>
-					<div class="place-role">
-						<a target="_blank" href="https://github.com/mmfKupl/priceChecker"
-							><h4>PriceChecker & Scrabers <span>| up18</span></h4></a
-						>
-						<p>
-							- разработано консольное приложение для проверки цен на товары по
-							введенным артикулам с формированием xml документа.
-						</p>
-						<p>
-							- разработан парсер сайтов-конкурентов с формированием xlsx
-							документа с информацией и сохранением картинок.
-						</p>
-					</div>
-				</section>
+        <section data-project="ND" id="ND" class="section-box section-mob-swap">
+            <div class="section-date">
+                <h4>Октябрь - Ноябрь 2019</h4>
+                <p>фриланс разработка проекта</p>
+            </div>
+            <div class="place-role">
+                <a target="_blank" href="http://a0350381.xsph.ru/"
+                ><h4>Сайт-каталог<span> | nordex97</span></h4></a
+                >
+                <h5>
+                    Full-stack разработка |
+                    <a
+                            class="not-print"
+                            target="_blank"
+                            href="https://github.com/mmfKupl/nordex97"
+                    >
+                        <span class="i"><i class="fab fa-github"></i></span>git
+                    </a>
+                </h5>
+                <p>Разработал:</p>
+                <p>- дизайн и верстка;</p>
+                <p>- адаптивность;</p>
+                <p>- проектирование и заполнение бд;</p>
+                <p>- настройка ssr и мета-тегов;</p>
+                <p>- деплой на хостинг.</p>
+            </div>
+        </section>
 
-				<section
-					data-project="TB"
-					id="TRB"
-					class="section-box section-mob-swap"
-				>
-					<div class="section-date">
-						<h4>Лето 2018 - осень 2018</h4>
-						<p>разработка коммерческого проекта</p>
-					</div>
-					<div class="place-role">
-						<h4>TradeBots <span>| retarcorp</span></h4>
-						<h5>Full-stack разработка</h5>
-						<p>
-							TradeBots - веб-платформа, предоставляющая ботов для трейдинга на
-							криптобирже
-							<a target="_blank" href="https://www.binance.com/">Binance</a>.
-						</p>
-						<p>
-							В данном проекте мной были разработаны - API сервер, боты и
-							веб-интерфейс.
-						</p>
-						<p>
-							Основная работа ботов заключалась в взаимодействии с данными о
-							ордера на бирже через обращение к Binance API, представляющие
-							собой xhr запросы, возвращаюшие json объект. Также пришлось
-							парсить сигналы
-							<a target="_blank" href="https://www.tradingview.com/"
-								>tradingview</a
-							>
-							и привязывать оплату криптовалютой через
-							<a target="_blank" href="https://bitaps.com/">bitaps</a>.
-						</p>
-					</div>
-				</section>
-			</section>
+        <section data-project="DF" id="DF" class="section-box section-mob-swap">
+            <div class="section-date">
+                <h4>Октябрь 2019</h4>
+                <p>фриланс разработка проекта</p>
+            </div>
+            <div class="place-role">
+                <a target="_blank" href="https://dewalt.com.by/"
+                ><h4>DeWalt.com.by<span> | up18</span></h4></a
+                >
+                <h5>Full-stack разработка |
+                    <a
+                            class="not-print"
+                            target="_blank"
+                            href="https://github.com/mmfKupl/dewalt-form"
+                    >
+                        <span class="i"><i class="fab fa-github"></i></span>git
+                    </a></h5>
+                <p>
+                    Проект представляет собой сайт, через который можно оформить
+                    заявку на гарантийный ремонт инструмента.
+                </p>
+                <p>Разработал:</p>
+                <p>- дизайн и верстка;</p>
+                <p>- интерфейс для взаимондействия с формами;</p>
+                <p>
+                    - обработку форм с последующей отправкой email и генерацией xml
+                    документа.
+                </p>
+            </div>
+        </section>
 
-			<section class="about about-myself">
-				<h3>Обо мне</h3>
-				<section class="section-box">
-					<p>
-						Имею опыт работы более двух над коммерческими проектами,
-						разрабатываемыми с нуля, в роли Full Stack JS, опыт общения напрямую
-						с заказчиком, опыт работы в команде.
-					</p>
-					<p>
-						В данный момент активно изучаю Angular.
-					</p>
-					<p>
-						Уровень Английского - pre-intermediate+, подтягиваю свой скилл в нем
-						с репетитором.
-					</p>
-				</section>
-			</section>
-		</main>
-		<footer>
-			<a target="_blank" href="https://www.linkedin.com/in/ivan-kuplevich/">
-				<span class="i"><i class="fab fa-linkedin"></i></span>
-				<h4>LinkedIn</h4>
-			</a>
-			<a target="_blank" href="https://github.com/mmfKupl">
-				<span class="i"><i class="fab fa-github"></i></span>
-				<h4>GitHub</h4>
-			</a>
-			<a target="_blank" href="https://t.me/Kupll">
-				<span class="i"><i class="fab fa-telegram"></i></span>
-				<h4>Telegram</h4>
-			</a>
-			<!-- <span class="right">|</span> -->
-			<!-- <a id="switchColor" class="right1">
-			<span class="i">
-				<i class="fas fa-adjust"></i>
-			</span><h4 aria-label="switch color mode"></h4>
-		</a> -->
-			<!-- <a id="switchLanguage" href="indexen.html" class="right1">
-			<span class="i">
-				<i class="fas fa-globe"></i>
-			</span><h4 aria-label="switch language"></h4>
-		</a> -->
-		</footer>
-	</body>
+        <section
+                data-project="BWS"
+                id="BWS"
+                class="section-box section-mob-swap"
+        >
+            <div class="section-date">
+                <h4>Осень 2017 - лето 2019</h4>
+                <p>разработка и поддержка коммерческого проекта</p>
+            </div>
+            <div class="place-role">
+                <a target="_blank" href="https://retarcorp.by/portfolio/BWSChart/"
+                ><h4>BWSChart<span> | retarcorp</span></h4></a
+                >
+                <h5>Front-end разработка</h5>
+                <p>
+                    Проект представляет собой многофункциональную платформу для
+                    отображения и работы с графиками валютных рынков.
+                </p>
+                <p>Разработал:</p>
+                <p>- UI интерфейс для работы с графиком;</p>
+                <p>- графической движок платформы.</p>
+            </div>
+        </section>
 
-	<script type="text/javascript" src="script.js?v=1.7"></script>
+        <section
+                data-project="OS"
+                id="OSST"
+                class="section-box section-mob-swap"
+        >
+            <div class="section-date">
+                <h4>Весна 2019</h4>
+                <p>фриланс разработка сайта-превью</p>
+            </div>
+            <div class="place-role">
+                <a target="_blank" href="https://stanley.com.by/"
+                ><h4>Stanley.com.by <span>| up18</span></h4></a
+                >
+                <h5>Front-end разработка</h5>
+                <p>Разработан дизайн, сверстана страница и привязаны метрики.</p>
+                <p>
+                    Было акцентированно внимание на дизайн и верстку, которая содержит
+                    в себе качественную семантику, доступность и адаптивность.
+                </p>
+            </div>
+        </section>
+
+        <section
+                data-project="OSG"
+                id="OSG"
+                class="section-box section-mob-swap"
+        >
+            <div class="section-date">
+                <h4>Весна 2019</h4>
+                <p>фриланс разработка консольных приложений</p>
+            </div>
+            <div class="place-role">
+                <a target="_blank" href="https://github.com/mmfKupl/priceChecker"
+                ><h4>PriceChecker & Scrabers <span>| up18</span></h4></a
+                >
+                <p>
+                    - разработано консольное приложение для проверки цен на товары по
+                    введенным артикулам с формированием xml документа.
+                </p>
+                <p>
+                    - разработан парсер сайтов-конкурентов с формированием xlsx
+                    документа с информацией и сохранением картинок.
+                </p>
+            </div>
+        </section>
+
+        <section
+                data-project="TB"
+                id="TRB"
+                class="section-box section-mob-swap"
+        >
+            <div class="section-date">
+                <h4>Лето 2018 - осень 2018</h4>
+                <p>разработка коммерческого проекта</p>
+            </div>
+            <div class="place-role">
+                <h4>TradeBots <span>| retarcorp</span></h4>
+                <h5>Full-stack разработка</h5>
+                <p>
+                    TradeBots - веб-платформа, предоставляющая ботов для трейдинга на
+                    криптобирже
+                    <a target="_blank" href="https://www.binance.com/">Binance</a>.
+                </p>
+                <p>
+                    В данном проекте мной были разработаны - API сервер, боты и
+                    веб-интерфейс.
+                </p>
+                <p>
+                    Основная работа ботов заключалась в взаимодействии с данными о
+                    ордера на бирже через обращение к Binance API, представляющие
+                    собой xhr запросы, возвращаюшие json объект. Также пришлось
+                    парсить сигналы
+                    <a target="_blank" href="https://www.tradingview.com/"
+                    >tradingview</a
+                    >
+                    и привязывать оплату криптовалютой через
+                    <a target="_blank" href="https://bitaps.com/">bitaps</a>.
+                </p>
+            </div>
+        </section>
+    </section>
+
+    <section class="about about-myself">
+        <h3>Обо мне</h3>
+        <section class="section-box">
+            <p>
+                Имею опыт работы более двух над коммерческими проектами,
+                разрабатываемыми с нуля, в роли Full Stack JS, опыт общения напрямую
+                с заказчиком, опыт работы в команде.
+            </p>
+            <p>
+                В данный момент активно изучаю Angular.
+            </p>
+            <p>
+                Уровень Английского - pre-intermediate+, подтягиваю свой скилл в нем
+                с репетитором.
+            </p>
+        </section>
+    </section>
+</main>
+<footer>
+    <a target="_blank" href="https://www.linkedin.com/in/ivan-kuplevich/">
+        <span class="i"><i class="fab fa-linkedin"></i></span>
+        <h4>LinkedIn</h4>
+    </a>
+    <a target="_blank" href="https://github.com/mmfKupl">
+        <span class="i"><i class="fab fa-github"></i></span>
+        <h4>GitHub</h4>
+    </a>
+    <a target="_blank" href="https://t.me/Kupll">
+        <span class="i"><i class="fab fa-telegram"></i></span>
+        <h4>Telegram</h4>
+    </a>
+    <!-- <span class="right">|</span> -->
+    <!-- <a id="switchColor" class="right1">
+    <span class="i">
+        <i class="fas fa-adjust"></i>
+    </span><h4 aria-label="switch color mode"></h4>
+</a> -->
+    <!-- <a id="switchLanguage" href="indexen.html" class="right1">
+    <span class="i">
+        <i class="fas fa-globe"></i>
+    </span><h4 aria-label="switch language"></h4>
+</a> -->
+</footer>
+</body>
+
+<script type="text/javascript" src="script.js?v=1.7"></script>
 </html>
